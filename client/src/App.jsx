@@ -1,10 +1,14 @@
 import React from 'react'
-import { AnimatedGridPattern } from './components/magicui/animated-grid-pattern'
+import Navbar from './components/Navbar'
+import Hero from './components/Pages/Home/Hero'
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 const App = () => {
   return (
     <>
-    <AnimatedGridPattern/>
+    <SmoothCursor />
+    <Navbar/>
+    <Hero/>
     </>
   )
 }
