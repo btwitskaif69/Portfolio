@@ -97,7 +97,13 @@ export function VelocityScroll({
   return (
     (<div
       className={cn(
-        "relative w-full bg-black text-4xl p-5 font-medium tracking-[-0.02em] md:text-7xl md:leading-[5.5rem]",
+        "relative w-full bg-black",
+        "text-2xl p-4 font-medium tracking-tight", // Mobile-first
+        "xs:text-3xl", // Small phones
+        "sm:text-4xl sm:p-5", // Phones
+        "md:text-5xl md:leading-[4rem]", // Tablets
+        "lg:text-6xl lg:leading-[5rem]", // Laptops
+        "xl:text-7xl xl:leading-[5.5rem]",
         className
       )}
       {...props}>
