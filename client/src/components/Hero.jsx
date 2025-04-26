@@ -40,13 +40,13 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden flex items-center justify-center min-h-screen bg-black py-10">
+    <section className="relative overflow-hidden flex items-center justify-center min-h-screen bg-black py-20">
       {/* Content */}
       <div className="relative z-10 w-full">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           {/* Animated Greeting */}
           <div className="w-full flex justify-center py-2.5">
-            <AnimatedGradientText className="text-1xl font-medium tracking-tight lg:text-2xl text-center max-w-6xl mx-auto">
+            <AnimatedGradientText className="text-2xl font-medium tracking-tight lg:text-3xl text-center max-w-6xl mx-auto">
               {greetings[currentGreeting]}
             </AnimatedGradientText>
           </div>

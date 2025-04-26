@@ -10,10 +10,9 @@ const defaultNavigationLinks = [
 ];
 
 const defaultSocialLinks = [
-  { href: "https://facebook.com", icon: <Facebook size={24} /> },
-  { href: "https://x.com/ayushmxxn", icon: <Twitter size={24} /> },
-  { href: "https://linkedin.com", icon: <Linkedin size={24} /> },
-  { href: "https://github.com/ayushmxxn", icon: <Github size={24} /> },
+  { href: "https://x.com/btwitskaif69", icon: <Twitter size={24} /> },
+  { href: "https://www.linkedin.com/in/btwitskaif69", icon: <Linkedin size={24} /> },
+  { href: "https://github.com/btwitskaif69", icon: <Github size={24} /> },
 ];
 
 const Footer = ({
@@ -23,7 +22,7 @@ const Footer = ({
 }) => {
   return (
     <footer className="bg-black text-gray-300">
-      <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+      <div className="max-w-10xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-0">
           {/* Logo Section - Fixed */}
           <div className="flex-shrink-0">
