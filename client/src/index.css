@@ -94,6 +94,10 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    cursor: none; /* Disable all cursors globally */
+  }
+  button, a {
+    cursor: none !important; /* Ensure buttons and links don't show default cursors */
   }
   body {
     @apply bg-background text-foreground;

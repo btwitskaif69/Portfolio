@@ -6,6 +6,7 @@ import { ContactForm } from '@/components/ContactForm';
 import Footer from './components/Footer';
 // import { ShineBorder } from "@/components/magicui/shine-border";
 import { TextReveal } from "@/components/magicui/text-reveal";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 const App = () => {
 
@@ -13,6 +14,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
+      <SmoothCursor />
       <Hero/>
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
       <VelocityScroll>MongoDB Canva Bootstrap PHP Adobe Photoshop JavaScript Vite Express.js NodeJS TailwindCSS JWT Adobe Illustrator EJS Postman Vercel HTML5 Java React Router MySQL Netlify Python C++ React Adobe Lightroom</VelocityScroll>
