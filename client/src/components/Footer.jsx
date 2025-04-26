@@ -22,7 +22,7 @@ const Footer = ({
   socialLinks = defaultSocialLinks,
 }) => {
   return (
-    <footer className="bg-black text-gray-300 pt-10">
+    <footer className="bg-black text-gray-300">
       <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-0">
           {/* Logo Section - Fixed */}

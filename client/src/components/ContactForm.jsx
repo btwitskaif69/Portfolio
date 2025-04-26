@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function ContactForm() {
   return (
+    <div className="p-5 align-center flex flex-col items-center justify-center bg-black">
     <div className="container mx-auto bg-black rounded-lg p-8 space-y-8 my-8  sm:mx-8 lg:mx-auto outline-2">
       <div className="space-y-4">
         <h1 className="text-4xl font-semibold tracking-tight text-gray-100">
@@ -71,6 +72,7 @@ export function ContactForm() {
           Send
         </Button>
       </form>
+    </div>
     </div>
   );
 }
