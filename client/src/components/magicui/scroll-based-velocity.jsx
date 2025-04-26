@@ -98,11 +98,17 @@ export function VelocityScroll({
     (<div
       className={cn(
         "relative w-full bg-black",
-        "text-2xl p-4 font-medium tracking-tight", // Mobile-first
-        "xs:text-3xl", // Small phones
-        "sm:text-4xl sm:p-5", // Phones
-        "md:text-5xl md:leading-[4rem]", // Tablets
-        "lg:text-6xl lg:leading-[5rem]", // Laptops
+        // Mobile-first (320px+)
+        "text-3xl p-4 font-medium tracking-tight leading-[2.5rem]", // Increased base size
+        // Small phones (375px+)
+        "xs:text-4xl xs:leading-[3rem]",
+        // Phones (480px+)
+        "sm:text-5xl sm:p-5 sm:leading-[3.5rem]",
+        // Tablets (768px+)
+        "md:text-6xl md:leading-[4.5rem]",
+        // Laptops (1024px+)
+        "lg:text-7xl lg:leading-[5.5rem]",
+        // Desktops (1280px+)
         "xl:text-7xl xl:leading-[5.5rem]",
         className
       )}
