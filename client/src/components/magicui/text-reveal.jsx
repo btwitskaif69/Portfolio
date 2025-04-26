@@ -19,7 +19,7 @@ export const TextReveal = ({ children, className }) => {
     <div ref={targetRef} className={cn("relative z-0 h-[200vh] bg-black", className)}>
       <div className="sticky top-0 mx-auto flex h-[50%] max-w-6xl items-center justify-center bg-transparent px-[1rem] py-[5rem]">
         <span className="flex flex-wrap justify-center w-full p-5 text-2xl font-medium text-white/50 md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl 
-          leading-8 md:leading-9 lg:leading-10 xl:leading-[3rem] gap-y-4">
+  leading-6 md:leading-8 lg:leading-9 xl:leading-[2.5rem] gap-y-3">
           {words.map((word, i) => {
             const start = i / words.length;
             const end = start + 1 / words.length;
