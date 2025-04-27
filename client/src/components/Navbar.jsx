@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import logo from '@/assets/logo.png';
+import logo from '@/assets/logo.svg';
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
 
 const Navbar = () => {
@@ -11,7 +11,7 @@ const Navbar = () => {
           <img 
             src={logo} 
             alt="Logo"
-            className="h-4 sm:h-6 w-auto"
+            className="h-5 sm:h-7 w-auto"
           />
         </div>
       </div>

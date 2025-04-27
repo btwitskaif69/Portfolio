@@ -1,6 +1,6 @@
 import React from "react";
 import { Facebook, Twitter, Linkedin, Github } from "lucide-react";
-import logo from '@/assets/logo.png'; // Make sure this path is correct
+import logo from '@/assets/logo.svg'; // Make sure this path is correct
 
 const defaultNavigationLinks = [
   { href: "/about", label: "About Us" },
@@ -30,7 +30,7 @@ const Footer = ({
               <img 
                 src={logo}  // Use imported logo variable
                 alt={`${brandName} Logo`}
-                className="h-4 sm:h-6 w-auto" // Adjusted size for better visibility
+                className="h-5 sm:h-7 w-auto" // Adjusted size for better visibility
               />
             </a>
           </div>
