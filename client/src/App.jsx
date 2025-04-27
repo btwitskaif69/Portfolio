@@ -17,7 +17,7 @@ const App = () => {
       <SmoothCursor />
       <Hero/>
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-      <VelocityScroll>MongoDB Canva Bootstrap PHP Adobe Photoshop JavaScript Vite Express.js NodeJS TailwindCSS JWT Adobe Illustrator EJS Postman Vercel HTML5 Java React Router MySQL Netlify Python C++ React Adobe Lightroom</VelocityScroll>
+      <VelocityScroll>MongoDB Bootstrap PHP JavaScript Vite Express.js NodeJS TailwindCSS JWT EJS Postman Vercel HTML5 Java React Router Dom MySQL Netlify Python C++ React </VelocityScroll>
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
     </div>
