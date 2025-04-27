@@ -68,7 +68,7 @@ const Hero = () => {
               Full Stack Developer
             </h1>
             <p className="text-[#D1D5DB] lg:text-xl text-center max-w-3xl mx-auto">
-              Software Engineer passionate about building cool things, helping
+            Full Stack Developer passionate about building cool things, helping
               people with tech, and sharing the journey online!
             </p>
           </div>
