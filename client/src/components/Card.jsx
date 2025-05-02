@@ -2,6 +2,7 @@
 import { useTransform, motion, useScroll } from 'framer-motion';
 import { useRef } from 'react';
 
+
 const Card = ({
   i,
   title = '',
@@ -32,6 +33,7 @@ const Card = ({
         top: `calc(20vh + ${i * (window.innerWidth < 768 ? 15 : 25)}px)`
       }}
     >
+      
       <motion.div
         className="flex flex-col md:flex-row w-full md:w-[90%] h-[85%] md:h-[90%] rounded-xl md:rounded-2xl p-4 md:p-7 gap-6 md:gap-10 text-white bg-black outline-2"
       >

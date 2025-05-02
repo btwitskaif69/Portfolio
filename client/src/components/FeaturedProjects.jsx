@@ -20,7 +20,7 @@ const FeaturedProjects = () => {
   return (
     <div ref={containerRef}>
       {/* Added heading container */}
-      <div className="w-full flex justify-center text-center px-4 mb-5 md:mb-7">
+      <div className="w-full flex justify-center text-center px-4 mb-7 md:mb-8 lg:mb-10 ">
   <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium">
     <AnimatedGradientText>
     Featured Projects
