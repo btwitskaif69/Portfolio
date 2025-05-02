@@ -25,7 +25,7 @@ const Card = ({
   return (
     <div
       ref={container}
-      className="min-h-[50vh] md:h-[70vh] flex items-center justify-center sticky px-10 md:px-0" // Added horizontal padding
+      className="min-h-[50vh] md:h-[70vh] flex items-center justify-center sticky px-5 md:px-0" // Added horizontal padding
       style={{
         scale,
         top: `calc(20vh + ${i * (window.innerWidth < 768 ? 15 : 25)}px)`
