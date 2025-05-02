@@ -3,12 +3,16 @@ import image2 from '../assets/image2.jpg';
 import image3 from '../assets/image3.jpg';
 import image4 from '../assets/image4.jpg';
 import image5 from '../assets/image5.jpg';
+// import image6 from '../assets/project1.jpg';
+import image7 from '../assets/Project2.jpg';
+
+
 
 export const projects = [
   {
     title: "Matthias Leidinger",
     description: "A creative portfolio showcasing the work of Matthias Leidinger, featuring innovative designs and unique concepts.",
-    src: image1,
+    src: image7,
     color: "#BBACAF"
   },
   {
