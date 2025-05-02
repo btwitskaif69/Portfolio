@@ -5,6 +5,7 @@ import { useRef } from 'react';
 const Card = ({
   i,
   title = '',
+  catagory = '',
   description = '',
   src = '',
   color = '#1e1e1e',
@@ -49,34 +50,37 @@ const Card = ({
         </div>
 
         {/* Right - Text */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center md:justify-start text-left px-0 md:px-0">
-          {/* Subtitle */}
-          <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl 
-                      text-red-500 font-semibold uppercase tracking-widest mb-1 md:mb-2">
-            Crate Connect
-          </p>
+<div className="w-full md:w-1/2 flex flex-col justify-center justify-start  text-left px-0 md:px-0 min-w-[30%] pt-10 mb-0">
+  {/* title */}
+  <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl 
+              text-red-500 font-semibold uppercase tracking-widest mb-0 md:mb-1
+              break-words overflow-hidden">
+    {title}
+  </p>
 
-          {/* Title */}
-          <h2 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
-                      font-medium mb-3 md:mb-4 lg:mb-6">
-            {title}
-          </h2>
+  {/* catagory */}
+  <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl 
+              font-medium mb-2 md:mb-3 lg:mb-4
+              break-words leading-tight">
+    {catagory}
+  </h2>
 
-          {/* Content */}
-          <div className="space-y-2 md:space-y-4 text-gray-300 leading-relaxed">
-            {/* About heading */}
-            <p className="text-base md:text-lg lg:text-xl xl:text-2xl 
-                        text-white font-semibold">
-              About
-            </p>
-            
-            {/* Description */}
-            <p className="text-sm xs:text-base sm:text-lg md:text-xl 
-                       leading-relaxed md:leading-loose">
-              {description}
-            </p>
-          </div>
-        </div>
+  {/* Content */}
+  <div className="text-gray-300 leading-relaxed">
+  {/* About heading */}
+  <p className="text-base md:text-lg lg:text-xl 
+              text-white font-semibold mt-5 mb-1">
+    About
+  </p>
+  
+  {/* Description */}
+  <p className="text-sm xs:text-base sm:text-lg md:text-lg 
+             leading-relaxed md:leading-loose break-words
+             overflow-hidden">
+    {description}
+  </p>
+</div>
+</div>
       </motion.div>
     </div>
   );
