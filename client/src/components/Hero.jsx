@@ -54,20 +54,20 @@ const Hero = () => {
           {/* Heading */}
           <div className="w-full flex flex-col items-center space-y-6">
             <h1
-              className="text-4xl font-medium tracking-tight lg:text-7xl text-center max-w-6xl mx-auto 
+              className="text-4xl font-medium tracking-tight lg:text-8xl text-center max-w-6xl mx-auto 
             bg-gradient-to-b from-gray-600 via-gray-200 to-white 
             bg-clip-text text-transparent"
             >   
               Hi, I'm Mohd Kaif
             </h1>
             <h1
-              className="text-4xl font-medium tracking-tight lg:text-7xl text-center max-w-6xl mx-auto 
+              className="text-4xl font-medium tracking-tight lg:text-8xl text-center max-w-6xl mx-auto 
             bg-gradient-to-r from-purple-600 via-pink-500 to-rose-400 
             bg-clip-text text-transparent"
             >
               Full Stack Developer
             </h1>
-            <p className="text-[#D1D5DB] lg:text-xl text-center max-w-3xl mx-auto">
+            <p className="text-[#D1D5DB] lg:text-xl text-center max-w-4xl mx-auto">
             Full Stack Developer passionate about building cool things, helping
               people with tech, and sharing the journey online!
             </p>
@@ -91,36 +91,7 @@ const Hero = () => {
             <InteractiveHoverButton>Learn more</InteractiveHoverButton>
           </div>
 
-          {/* Technology logos */}
-          <div className="w-full flex flex-col items-center gap-5 mt-20">
-            <p className="font-medium text-muted-foreground text-center">
-              Built with open-source technologies
-            </p>
-            <div className="w-full flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
-              {[
-                "https://shadcnblocks.com/images/block/logos/shadcn-ui-icon.svg",
-                "https://shadcnblocks.com/images/block/logos/typescript-icon.svg",
-                "https://shadcnblocks.com/images/block/logos/react-icon.svg",
-                "https://shadcnblocks.com/images/block/logos/tailwind-icon.svg",
-              ].map((logo, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className={cn(
-                    buttonVariants({ variant: "outline" }),
-                    "group flex aspect-square h-12 items-center justify-center p-0"
-                  )}
-                  aria-label="Technology logo"
-                >
-                  <img
-                    src={logo}
-                    alt=""
-                    className="h-6 opacity-70 transition-all group-hover:opacity-100 mx-auto"
-                  />
-                </a>
-              ))}
-            </div>
-          </div>
+
         </div>
       </div>
     </section>

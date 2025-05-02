@@ -3,7 +3,7 @@ import image2 from '../assets/image2.jpg';
 import image3 from '../assets/image3.jpg';
 import image4 from '../assets/image4.jpg';
 import image5 from '../assets/image5.jpg';
-// import image6 from '../assets/project1.jpg';
+import image6 from '../assets/project1.jpg';
 import image7 from '../assets/Project2.jpg';
 
 
@@ -13,7 +13,7 @@ export const projects = [
     title: "Skill Set",
     catagory: "Online Learning Platform",
     description: "Skill Set is a global online learning platform that offers anyone, anywhere, access to online courses and degrees from leading universities and companies.",
-    src: image7,
+    src: image6,
     color: "#BBACAF"
   },
   {
