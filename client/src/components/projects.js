@@ -28,7 +28,7 @@ export const projects = [
     color: "#C2491D"
   },
   {
-    title: "Mathias Svold and Ulrik Hasemann",
+    title: "Mathias Svold",
     description: "A collaborative project by Mathias Svold and Ulrik Hasemann, capturing the essence of Nordic landscapes through stunning photography.",
     src: image4,
     color: "#B62429"

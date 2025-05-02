@@ -11,7 +11,7 @@ const Card = ({
   progress = () => 0,
   range = [0, 1],
   targetScale = 1,
-  scale = 1 // New prop for dynamic scaling
+  scale = 1
 }) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -20,23 +20,22 @@ const Card = ({
   });
 
   const safeRange = Array.isArray(range) && range.length === 2 ? range : [0, 1];
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1.5, 1]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1.2, 1]);
 
   return (
-<div
-  ref={container}
-  className="h-[70vh] flex items-center justify-center sticky"
-  style={{
-    scale,
-    top: `calc(15vh + ${i * 25}px)` // Adjusted top value
-  }}
->
+    <div
+      ref={container}
+      className="min-h-[50vh] md:h-[70vh] flex items-center justify-center sticky px-10 md:px-0" // Added horizontal padding
+      style={{
+        scale,
+        top: `calc(20vh + ${i * (window.innerWidth < 768 ? 15 : 25)}px)`
+      }}
+    >
       <motion.div
-        
-        className="flex flex-row w-[90%] h-[90%] rounded-2xl p-6.5 gap-10 text-white bg-black outline-2"
+        className="flex flex-col md:flex-row w-full md:w-[90%] h-[85%] md:h-[90%] rounded-xl md:rounded-2xl p-4 md:p-7 gap-6 md:gap-10 text-white bg-black outline-2"
       >
         {/* Left - Image */}
-        <div className="w-[60%] h-[100%] rounded-xl overflow-hidden shadow-xl flex items-center justify-center">
+        <div className="w-full md:w-[60%] h-[40vh] md:h-full rounded-xl overflow-hidden shadow-xl flex items-center justify-center">
           <motion.div
             className="w-full h-full flex items-center justify-center"
             style={{ scale: imageScale }}
@@ -50,34 +49,34 @@ const Card = ({
         </div>
 
         {/* Right - Text */}
-        <div className="w-1/2 flex flex-col justify-items-start text-left">
-  {/* Subtitle */}
-  <p className="text-sm sm:text-base md:text-lg lg:text-xl 
-              text-red-500 font-semibold uppercase tracking-widest mb-2">
-    Crate Connect
-  </p>
+        <div className="w-full md:w-1/2 flex flex-col justify-center md:justify-start text-left px-0 md:px-0">
+          {/* Subtitle */}
+          <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl 
+                      text-red-500 font-semibold uppercase tracking-widest mb-1 md:mb-2">
+            Crate Connect
+          </p>
 
-  {/* Title */}
-  <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
-               font-bold mb-4 md:mb-6">
-    {title}
-  </h2>
+          {/* Title */}
+          <h2 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
+                      font-bold mb-3 md:mb-4 lg:mb-6">
+            {title}
+          </h2>
 
-  {/* Content */}
-  <div className="space-y-4 text-gray-300 leading-relaxed">
-    {/* About heading */}
-    <p className="text-lg md:text-xl lg:text-2xl 
-                text-white font-semibold">
-      About
-    </p>
-    
-    {/* Description */}
-    <p className="text-base sm:text-lg md:text-xl 
-               leading-relaxed">
-      {description}
-    </p>
-  </div>
-</div>
+          {/* Content */}
+          <div className="space-y-2 md:space-y-4 text-gray-300 leading-relaxed">
+            {/* About heading */}
+            <p className="text-base md:text-lg lg:text-xl xl:text-2xl 
+                        text-white font-semibold">
+              About
+            </p>
+            
+            {/* Description */}
+            <p className="text-sm xs:text-base sm:text-lg md:text-xl 
+                       leading-relaxed md:leading-loose">
+              {description}
+            </p>
+          </div>
+        </div>
       </motion.div>
     </div>
   );
