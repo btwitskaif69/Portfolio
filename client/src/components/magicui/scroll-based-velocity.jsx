@@ -99,17 +99,17 @@ export function VelocityScroll({
       className={cn(
         "relative w-full bg-black",
         // Mobile-first (320px+)
-        "text-3xl p-4 font-medium tracking-tight leading-[2.5rem]", // Increased base size
+        "text-4xl p-4 font-medium tracking-tight leading-[3rem]", // Increased base size
         // Small phones (375px+)
-        "xs:text-4xl xs:leading-[3rem]",
+        "xs:text-5xl xs:leading-[3.5rem]",
         // Phones (480px+)
-        "sm:text-5xl sm:p-5 sm:leading-[3.5rem]",
+        "sm:text-6xl sm:p-5 sm:leading-[4rem]",
         // Tablets (768px+)
-        "md:text-6xl md:leading-[4.5rem]",
+        "md:text-7xl md:leading-[4rem]",
         // Laptops (1024px+)
-        "lg:text-7xl lg:leading-[5.5rem]",
+        "lg:text-8xl lg:leading-[8rem]",
         // Desktops (1280px+)
-        "xl:text-7xl xl:leading-[5.5rem]",
+        "xl:text-8xl xl:leading-[8rem]",
         className
       )}
       {...props}>
