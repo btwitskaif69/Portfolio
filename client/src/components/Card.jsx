@@ -58,7 +58,7 @@ const Card = ({
 
           {/* Title */}
           <h2 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
-                      font-bold mb-3 md:mb-4 lg:mb-6">
+                      font-medium mb-3 md:mb-4 lg:mb-6">
             {title}
           </h2>
 
