@@ -8,14 +8,16 @@ import Footer from './components/Footer';
 import { TextReveal } from "@/components/magicui/text-reveal";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import FeaturedProjects from './components/FeaturedProjects';
+import SmoothScrollProvider from '@/components/SmoothScrollProvider';
 
 const App = () => {
 
   
   return (
-    <div>
+    <>
       <Navbar />
       <SmoothCursor />
+      <SmoothScrollProvider>
       <Hero/>
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
       <VelocityScroll>MongoDB Bootstrap PHP JavaScript Vite Express.js NodeJS TailwindCSS JWT EJS Postman Vercel HTML5 Java React Router Dom MySQL Netlify Python C++ React </VelocityScroll>
@@ -26,7 +28,8 @@ const App = () => {
       <FeaturedProjects/>
       <ContactForm/>
       <Footer/>
-    </div>
+      </SmoothScrollProvider>
+    </>
   )
 }
 
