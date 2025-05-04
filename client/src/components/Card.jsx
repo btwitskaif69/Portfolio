@@ -10,6 +10,7 @@ const Card = ({
   description = '',
   src = '',
   color = '#1e1e1e',
+  techStack = [],
   progress = () => 0,
   range = [0, 1],
   targetScale = 1,
@@ -38,7 +39,7 @@ const Card = ({
         className="flex flex-col md:flex-row w-full md:w-[90%] h-[85%] md:h-[90%] rounded-xl md:rounded-2xl p-4 md:p-7 gap-6 md:gap-10 text-white bg-black outline-2"
       >
         {/* Left - Image */}
-        <div className="w-full md:w-[60%] h-[40vh] md:h-full rounded-xl overflow-hidden shadow-xl flex items-center justify-center">
+        <div className="w-full md:w-[70%] h-[40vh] md:h-full rounded-xl overflow-hidden shadow-xl flex items-center justify-center">
           <motion.div
             className="w-full h-full flex items-center justify-center"
             style={{ scale: imageScale }}
@@ -81,6 +82,18 @@ const Card = ({
              overflow-hidden">
     {description}
   </p>
+  {techStack?.length > 0 && (
+  <div className="flex flex-wrap gap-2 mt-4">
+    {techStack.map((tech, index) => (
+      <span
+        key={index}
+        className="px-3 py-1 rounded-full text-sm bg-black text-white outline-1 outline-whitefont-semibold shadow-sm"
+      >
+        {tech}
+      </span>
+    ))}
+  </div>
+)}
 </div>
 </div>
       </motion.div>

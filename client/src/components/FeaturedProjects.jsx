@@ -39,6 +39,7 @@ const FeaturedProjects = () => {
             title={project.title}
             catagory={project.catagory}
             description={project.description}
+            techStack={project.techStack}
             src={project.src}
             url={project.link}
             color={project.color}
