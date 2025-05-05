@@ -41,7 +41,7 @@ const Card = ({
         h-[80%] sm:h-[85%] md:h-[90%] 
         rounded-lg sm:rounded-xl md:rounded-2xl 
         p-3 sm:p-4 md:p-7 gap-4 sm:gap-6 md:gap-10 
-        text-white bg-black bg-black outline-2"
+        text-white bg-black outline-2"
 >
         {/* Left - Image */}
         <div className="w-full md:w-[70%] h-[30vh] sm:h-[35vh] md:h-full 
@@ -55,6 +55,7 @@ const Card = ({
               src={src}
               alt={title}
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </motion.div>
         </div>
