@@ -27,19 +27,26 @@ const Card = ({
 
   return (
     <div
-      ref={container}
-      className="min-h-[50vh] md:h-[70vh] flex items-center justify-center sticky px-5 md:px-0" // Added horizontal padding
-      style={{
-        scale,
-        top: `calc(20vh + ${i * (window.innerWidth < 768 ? 15 : 25)}px)`
-      }}
-    >
+    ref={container}
+    className="min-h-[35vh] sm:min-h-[45vh] md:h-[60vh] lg:h-[70vh] 
+               flex items-center justify-center sticky px-3 sm:px-4 md:px-0"
+    style={{
+      scale,
+      top: `calc(20vh + ${i * 20}px)`
+    }}
+  >
       
       <motion.div
-        className="flex flex-col md:flex-row w-full md:w-[90%] h-[85%] md:h-[90%] rounded-xl md:rounded-2xl p-4 md:p-7 gap-6 md:gap-10 text-white bg-black outline-2"
-      >
+        className="flex flex-col md:flex-row w-full md:w-[90%] 
+        h-[80%] sm:h-[85%] md:h-[90%] 
+        rounded-lg sm:rounded-xl md:rounded-2xl 
+        p-3 sm:p-4 md:p-7 gap-4 sm:gap-6 md:gap-10 
+        text-white bg-black bg-black outline-2"
+>
         {/* Left - Image */}
-        <div className="w-full md:w-[70%] h-[40vh] md:h-full rounded-xl overflow-hidden shadow-xl flex items-center justify-center">
+        <div className="w-full md:w-[70%] h-[30vh] sm:h-[35vh] md:h-full 
+                rounded-lg overflow-hidden shadow-xl 
+                flex items-center justify-center">
           <motion.div
             className="w-full h-full flex items-center justify-center"
             style={{ scale: imageScale }}
@@ -53,7 +60,7 @@ const Card = ({
         </div>
 
         {/* Right - Text */}
-<div className="w-full md:w-1/2 flex flex-col justify-center justify-start  text-left px-0 md:px-0 min-w-[30%] pt-10 mb-0">
+<div className="w-full md:w-1/2 flex flex-col justify-center justify-start  text-left px-0 md:px-0 min-w-[30%] mb-0">
   {/* title */}
   <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl 
               text-red-500 font-semibold uppercase tracking-widest mb-0 md:mb-1
