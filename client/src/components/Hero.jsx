@@ -5,6 +5,7 @@ import { AnimatedGradientText } from "./magicui/animated-gradient-text";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import { useEffect, useState } from "react";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
+import resumeFile from '../assets/Resume.pdf';
 
 const Hero = () => {
     const greetings = [
@@ -39,6 +40,16 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = resumeFile;
+    link.download = 'Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+  
+
   return (
     <section className="relative overflow-hidden flex items-center justify-center min-h-screen bg-black py-20">
       {/* Content */}
@@ -68,8 +79,7 @@ const Hero = () => {
               Full Stack Developer
             </h1>
             <p className="text-[#D1D5DB] lg:text-xl text-center max-w-4xl mx-auto">
-            Full Stack Developer passionate about building cool things, helping
-              people with tech, and sharing the journey online!
+            Software Developer from Delhi, India, skilled in React, Node.js, Express, and MongoDB. <br />I build clean, responsive full stack web applications.
             </p>
           </div>
 
@@ -80,15 +90,10 @@ const Hero = () => {
               Get Started
               </AnimatedGradientText>
             </Button>
-            
-            <Button
-              variant="outline"
-              className="group gap-2 w-full sm:w-auto justify-center"
-            >
-              Learn more
-              <ExternalLink className="h-4 transition-transform group-hover:translate-x-0.5" />
-            </Button>
-            <InteractiveHoverButton>Learn more</InteractiveHoverButton>
+
+            <InteractiveHoverButton onClick={handleDownload}>Resume</InteractiveHoverButton>
+
+
           </div>
 
 
