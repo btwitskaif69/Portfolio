@@ -6,6 +6,7 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import { useEffect, useState } from "react";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import resumeFile from '../assets/Resume.pdf';
+import bg from '../assets/bg4.jpg';
 
 const Hero = () => {
     const greetings = [
@@ -51,9 +52,17 @@ const Hero = () => {
   
 
   return (
-    <section className="relative overflow-hidden flex items-center justify-center min-h-screen bg-black py-20">
+    <section
+      className="relative overflow-hidden flex items-center justify-center min-h-screen bg-black py-20"
+      style={{
+        backgroundImage: `url(${bg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center 50%', // Shift image down
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       {/* Content */}
-      <div className="relative z-10 w-full">
+      <div className="relative z-10 w-full ">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           {/* Animated Greeting */}
           <div className="w-full flex justify-center py-2.5">
