@@ -91,7 +91,7 @@ const Hero = () => {
               </AnimatedGradientText>
             </Button>
 
-            <InteractiveHoverButton onClick={handleDownload}>Resume</InteractiveHoverButton>
+            <InteractiveHoverButton onClick={handleDownload} className="shadow-sm transition-shadow hover:shadow w-full sm:w-auto" >Resume</InteractiveHoverButton>
 
 
           </div>
