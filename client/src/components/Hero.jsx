@@ -6,7 +6,7 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import { useEffect, useState } from "react";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import resumeFile from '../assets/Resume.pdf';
-import bg from '../assets/bg4.jpg';
+import bg from '../assets/bg7.jpg';
 
 const Hero = () => {
     const greetings = [
