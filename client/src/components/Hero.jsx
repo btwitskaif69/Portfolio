@@ -82,13 +82,14 @@ const Hero = () => {
             </h1>
             <h1
               className="text-4xl font-medium tracking-tight lg:text-8xl text-center max-w-6xl mx-auto 
-            bg-gradient-to-r from-purple-600 via-pink-500 to-rose-400 
-            bg-clip-text text-transparent"
+            bg-gradient-to-b from-purple-600 via-pink-500 to-rose-400 bg-clip-text text-transparent"
             >
               Full Stack Developer
             </h1>
             <p className="text-[#D1D5DB] lg:text-xl text-center max-w-4xl mx-auto">
-            Software Developer from Delhi, India, skilled in React, Node.js, Express, and MongoDB. <br />I build clean, responsive full stack web applications.
+           I create web applications with React, Node.js, Express, and MongoDB. Based in Delhi, India, I focus on building clean, responsive, and efficient solutions.
+
+
             </p>
           </div>
 

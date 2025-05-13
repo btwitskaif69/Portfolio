@@ -8,7 +8,7 @@ export function ContactForm() {
     <div className="p-5 align-center flex flex-col items-center justify-center bg-black">
       <div className="relative overflow-hidden container mx-auto bg-black rounded-lg p-8 space-y-8 my-8 sm:mx-8 lg:mx-auto outline-2">
         <ShineBorder 
-          shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} 
+          shineColor={["#9810fa", "#f6339a", "#ff637e"]} 
           className="rounded-lg"
         />
         
