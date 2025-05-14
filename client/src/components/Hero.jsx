@@ -5,6 +5,7 @@ import { AnimatedGradientText } from "./magicui/animated-gradient-text";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import { useEffect, useState } from "react";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
+import { ShinyButton } from "@/components/magicui/shiny-button";
 import resumeFile from '../assets/Resume.pdf';
 import bg from '../assets/bg7.jpg';
 
@@ -102,6 +103,8 @@ const Hero = () => {
             </Button>
 
             <InteractiveHoverButton onClick={handleDownload} className="shadow-sm transition-shadow hover:shadow w-full sm:w-auto" >Resume</InteractiveHoverButton>
+            <ShinyButton>Resume</ShinyButton>
+            <HoverBorderGradient>Resume</HoverBorderGradient>
 
 
           </div>
