@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import { useScroll, useTransform } from "framer-motion";
 import Card from "@/components/Card";
-import { projects } from "@/components/projects";
+import { projects } from "@/components/ProjectData";
 import { AnimatedGradientText } from "./magicui/animated-gradient-text";
 
 

@@ -1,129 +1,109 @@
 'use client';
 import { useTransform, motion, useScroll } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
+const MobileCard = ({ title, catagory, description, src, techStack }) => (
+  <div className="m-4">
+  <div className="w-full bg-black text-white rounded-lg p-4 mb-4 shadow-md outline-2">
+    <img
+      src={src}
+      alt={title}
+      className="h-full object-contain rounded-md mb-3"
+    />
+    <p className="text-red-500 text-sm font-semibold uppercase tracking-wide">{title}</p>
+    <h2 className="text-2xl font-medium mb-2">{catagory}</h2>
+    <p className="text-xs text-gray-300">{description}</p>
+    {techStack?.length > 0 && (
+      <div className="flex flex-wrap gap-2 mt-3">
+        {techStack.map((tech, index) => (
+          <span
+            key={index}
+            className="px-2 py-1 text-xs outline-1 rounded-full"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+    )}
+  </div>
+  </div>
+);
 
-const Card = ({
-  i,
-  title = '',
-  catagory = '',
-  description = '',
-  src = '',
-  color = '#1e1e1e',
-  techStack = [],
-  progress = () => 0,
-  range = [0, 1],
-  targetScale = 1,
-  scale = 1
-}) => {
+const DesktopCard = ({ i, title, catagory, description, src, techStack, scale }) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ['start end', 'start start']
   });
 
-  const safeRange = Array.isArray(range) && range.length === 2 ? range : [0, 1];
   const imageScale = useTransform(scrollYProgress, [0, 1], [1.2, 1]);
 
   return (
-  <div
-    ref={container}
-    className="min-h-[35vh] sm:min-h-[45vh] md:h-[60vh] lg:h-[70vh] 
-               flex items-center justify-center sticky px-3 sm:px-4 md:px-0"
-    style={{
-      scale,
-      top: `calc(20vh + ${i * 20}px)`
-    }}
-  >
-    {/* === Simple Mobile Layout === */}
-    <div className="block sm:hidden w-full bg-black text-white rounded-lg p-5 shadow-md outline-2">
-      <img
-        src={src}
-        alt={title}
-        className="w-full h-80 object-cover rounded-md mb-3"
-      />
-      <p className="text-red-500 text-sm font-semibold uppercase tracking-wide">{title}</p>
-      <h2 className="text-2xl font-bold mb-2">{catagory}</h2>
-      <p className="text-sm text-gray-300">{description}</p>
-      {techStack?.length > 0 && (
-        <div className="flex flex-wrap gap-2 mt-3">
-          {techStack.map((tech, index) => (
-            <span
-              key={index}
-              className="px-2 py-1 text-xs bg-gray-800 rounded-full"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-      )}
-    </div>
-
-    {/* === Full Desktop/Tablet Layout === */}
     <motion.div
-      className="hidden sm:flex flex-col md:flex-row w-full md:w-[90%] 
-      h-[80%] sm:h-[85%] md:h-[90%] 
-      rounded-lg sm:rounded-xl md:rounded-2xl 
-      p-3 sm:p-4 md:p-7 gap-4 sm:gap-6 md:gap-10 
-      text-white bg-black outline-2"
+      ref={container}
+      className="min-h-[45vh] md:h-[60vh] lg:h-[70vh] flex items-center justify-center sticky px-4 md:px-0"
+      style={{
+        top: `calc(15vh + ${i * 20}px)`
+      }}
     >
-      {/* Left - Image */}
-      <div className="w-full md:w-[80%] h-[30vh] sm:h-[35vh] md:h-full 
-                rounded-lg overflow-hidden shadow-xl 
-                flex items-center justify-center">
-        <motion.div
-          className="w-full h-full flex items-center justify-center"
-          style={{ scale: imageScale }}
-        >
-          <img
-            src={src}
-            alt={title}
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </motion.div>
-      </div>
-
-      {/* Right - Text */}
-      <div className="w-full md:w-1/2 flex flex-col justify-start text-left min-w-[30%] mb-0">
-        <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl 
-              text-red-500 font-semibold uppercase tracking-widest mb-0 md:mb-1
-              break-words overflow-hidden">
-          {title}
-        </p>
-        <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl 
-              font-medium mb-2 md:mb-3 lg:mb-4
-              break-words leading-tight">
-          {catagory}
-        </h2>
-        <div className="text-gray-300 leading-relaxed">
-          <p className="text-base md:text-lg lg:text-xl 
-              text-white font-semibold mt-5 mb-1">
-            About
-          </p>
-          <p className="text-sm xs:text-base sm:text-lg md:text-lg 
-             leading-relaxed md:leading-loose break-words
-             overflow-hidden">
-            {description}
-          </p>
-          {techStack?.length > 0 && (
-            <div className="flex flex-wrap gap-2 mt-4">
-              {techStack.map((tech, index) => (
-                <span
-                  key={index}
-                  className="px-3 py-1 rounded-full text-sm bg-black text-white font-semibold shadow-sm"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          )}
+      <motion.div
+        className="hidden sm:flex flex-col md:flex-row w-full md:w-[90%] h-[85%] md:h-[90%] rounded-xl md:rounded-2xl p-4 md:p-5 gap-6 md:gap-10 text-white bg-black outline-1"
+      >
+        <div className="w-full md:w-[80%] h-[35vh] md:h-full rounded-lg overflow-hidden shadow-xl">
+          <motion.div className="w-full h-full" style={{ scale: imageScale }}>
+            <img
+              src={src}
+              alt={title}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </motion.div>
         </div>
-      </div>
-    </motion.div>
-  </div>
-);
 
+        <div className="w-full md:w-1/2 flex flex-col justify-start py-10 text-left min-w-[30%]">
+          <p className="text-sm md:text-lg text-red-500 font-semibold uppercase tracking-widest">
+            {title}
+          </p>
+          <h2 className="sm:text-4xl md:text-xl lg:text-6xl font-medium mb-3">
+            {catagory}
+          </h2>
+          <div className="text-gray-300">
+            <p className="text-lg md:text-xl text-white font-semibold mt-5 mb-1">
+              About
+            </p>
+            <p className="text-base md:text-md leading-relaxed">
+              {description}
+            </p>
+            {techStack?.length > 0 && (
+              <div className="flex flex-wrap gap-2 mt-4">
+                {techStack.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 rounded-full text-xs outline-1 text-white font-semibold"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+};
+
+const Card = (props) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.matchMedia('(max-width: 640px)').matches);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  return isMobile ? <MobileCard {...props} /> : <DesktopCard {...props} />;
 };
 
 export default Card;
