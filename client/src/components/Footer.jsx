@@ -22,7 +22,7 @@ const Footer = ({
 }) => {
   return (
     <footer className="bg-black text-gray-300">
-      <div className="max-w-10xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+      <div className="max-w-10xl mx-auto px-4 pt-8 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-0">
           {/* Logo Section - Fixed */}
           <div className="flex-shrink-0">
@@ -69,6 +69,13 @@ const Footer = ({
         <div className="border-t border-gray-700 mt-8 pt-5">
           <div className="text-center text-sm text-gray-400">
             <p>&copy; {new Date().getFullYear()} {brandName}. All rights reserved.</p>
+          </div>
+          <div className="mb-0">
+             <img 
+                src={logo}  // Use imported logo variable
+                alt={`${brandName} Logo`}
+                className="h-90 w-auto flex items-end" // Adjusted size for better visibility
+              />
           </div>
         </div>
       </div>
