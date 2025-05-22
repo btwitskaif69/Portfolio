@@ -79,7 +79,7 @@ const Hero = () => {
 
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight text-center mx-auto 
             bg-gradient-to-b from-purple-600 via-pink-500 to-rose-400 bg-clip-text text-transparent pb-1 md:pb-2 lg:pb-5">
-              FullStack Developer
+              Full Stack Engineer
             </h1>
 
             <p className="text-[#D1D5DB] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-center max-w-sm md:max-w-xl lg:max-w-3xl mx-auto">I build web apps using React, Node.js, Express, and MongoDB. Based in Delhi, India.</p>
