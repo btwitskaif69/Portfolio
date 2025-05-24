@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { ShinyButton } from "@/components/magicui/shiny-button";
 import resumeFile from "../assets/Resume.pdf";
-import bg from "../assets/bg7.jpg";
+import bg from "../assets/bg.jpg";
 
 const Hero = () => {
   const greetings = [
@@ -78,7 +78,7 @@ const Hero = () => {
             </h1>
 
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight text-center mx-auto 
-            bg-gradient-to-b from-purple-600 via-pink-500 to-rose-400 bg-clip-text text-transparent pb-1 md:pb-2 lg:pb-5">
+            bg-gradient-to-b from-blue-800  to-blue-400 bg-clip-text text-transparent pb-1 md:pb-2 lg:pb-5">
               Full Stack Engineer
             </h1>
 
