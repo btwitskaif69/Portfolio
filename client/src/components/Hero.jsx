@@ -74,7 +74,7 @@ const Hero = () => {
           <div className="w-full flex flex-col items-center">
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight  text-center  mx-auto 
             bg-gradient-to-b from-gray-600 via-gray-200 to-white bg-clip-text text-transparent">
-              Hi, I'm Mohd Kaif
+              Hi. I'm Mohd Kaif.
             </h1>
 
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight text-center mx-auto 
