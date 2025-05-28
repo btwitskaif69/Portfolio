@@ -82,7 +82,7 @@ const Hero = () => {
               Full Stack Engineer
             </h1>
 
-            <p className="text-[#D1D5DB] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-center max-w-sm md:max-w-xl lg:max-w-3xl mx-auto">I build web apps with React, Node.js, Express, and MongoDB. Based in Delhi, I enjoy creating clean, functional solutions that just work.</p>
+            <p className="text-[#D1D5DB] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-center max-w-sm md:max-w-xl lg:max-w-3xl mx-auto">descption</p>
 
           </div>
 
