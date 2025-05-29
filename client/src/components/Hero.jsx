@@ -11,6 +11,8 @@ import resumeFile from "../assets/Resume.pdf";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import bg from "../assets/bg2.png";
 import {BookText} from "lucide-react";
+import { RainbowButton } from "./magicui/rainbow-button";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react"
 
 const Hero = () => {
   // const greetings = [
@@ -102,15 +104,54 @@ const Hero = () => {
           </div>
 
           {/* Buttons */}
-          <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-            <Button className="shadow-sm transition-shadow hover:shadow w-full sm:w-auto">
-              hdjshdsjdhj
-            </Button>
+          <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 mb-5">
+            <RainbowButton>View Projects</RainbowButton>
+            
             <ShinyButton  onClick={handleDownload}>
             <BookText className="mr-2" />
               Resume
             </ShinyButton>
+
+
           </div>
+          <div className="flex space-x-6">
+  <a href="https://github.com/btwitskaif69" target="_blank" rel="noopener noreferrer">
+    <Button
+      variant="outline"
+      className="w-14 h-14 bg-transparent hover:bg-white/10 hover:backdrop-blur-md transition-all duration-200"
+    >
+      <Github className="h-6 w-6" />
+      <span className="sr-only">GitHub</span>
+    </Button>
+  </a>
+  <a href="https://linkedin.com/in/btwitskaif69" target="_blank" rel="noopener noreferrer">
+    <Button
+      variant="outline"
+      className="w-14 h-14 bg-transparent hover:bg-white/10 hover:backdrop-blur-md transition-all duration-200"
+    >
+      <Linkedin className="h-6 w-6" />
+      <span className="sr-only">LinkedIn</span>
+    </Button>
+  </a>
+  <a href="https://x.com/btwitskaif69" target="_blank" rel="noopener noreferrer">
+    <Button
+      variant="outline"
+      className="w-14 h-14 bg-transparent hover:bg-white/10 hover:backdrop-blur-md transition-all duration-200"
+    >
+      <Twitter className="h-6 w-6" />
+      <span className="sr-only">Twitter</span>
+    </Button>
+  </a>
+  <a href="mailto:mohdkaif18th@gmail.com">
+    <Button
+      variant="outline"
+      className="w-14 h-14 bg-transparent hover:bg-white/10 hover:backdrop-blur-md transition-all duration-200"
+    >
+      <Mail className="h-6 w-6" />
+      <span className="sr-only">Email</span>
+    </Button>
+  </a>
+</div>
         </div>
       </div>
     </section>
