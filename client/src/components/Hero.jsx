@@ -1,5 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge"
 import { Button, buttonVariants } from "@/components/ui/button";
 import { AnimatedGradientText } from "./magicui/animated-gradient-text";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
@@ -7,11 +9,12 @@ import { useEffect, useState } from "react";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { ShinyButton } from "@/components/magicui/shiny-button";
 import resumeFile from "../assets/Resume.pdf";
-import bg from "../assets/bg.jpg";
+import { Spotlight } from "@/components/ui/spotlight-new";
+import bg from "../assets/bg2.png";
 
 const Hero = () => {
   const greetings = [
-    "As-salamu alaykum", // Arabic/Urdu
+    "As-salamu alaykum", // Arabic/Urdu2
     "Hello", // English
     "नमस्ते", // Hindi (Namaste)
     "Hola", // Spanish
@@ -51,18 +54,24 @@ const Hero = () => {
   };
 
   return (
-    <section
-      className="relative overflow-hidden flex items-center justify-center min-h-screen bg-black py-20"
-      style={{
-        backgroundImage: `url(${bg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center 50%", // Shift image down
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <section className="relative overflow-hidden flex items-center justify-center min-h-screen bg-black py-20 background-size-110%"
+       style={{
+  backgroundImage: `url(${bg})`,
+  backgroundSize: "cover",
+  backgroundPosition: "bottom",
+  backgroundRepeat: "no-repeat",
+}}>
+      <Spotlight />
       {/* Content */}
+
       <div className="relative z-10 w-full ">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 my-auto">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 my-auto flex align-center justify-center flex-col items-center">
+          <Badge
+            variant="secondary"
+            className="rounded-full px-4 py-2 text-sm font-medium bg-transparent mb-5 outline-1 outline-white ">
+            <div className="w-2 h-2 bg-white mr-2 animate-pulse " />
+            Available for new opportunities
+          </Badge>
           {/* Animated Greeting */}
           <div className="w-full flex justify-center mb-2">
             <AnimatedGradientText className="text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight text-center max-w-6xl mx-auto">
@@ -72,18 +81,23 @@ const Hero = () => {
 
           {/* Heading */}
           <div className="w-full flex flex-col items-center">
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight  text-center  mx-auto 
-            bg-gradient-to-b from-gray-600 via-gray-200 to-white bg-clip-text text-transparent">
+            <h1
+              className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight  text-center  mx-auto 
+            "
+            >
               Hi. I'm Mohd Kaif.
             </h1>
 
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight text-center mx-auto 
-            bg-gradient-to-b from-blue-800  to-blue-400 bg-clip-text text-transparent pb-1 md:pb-2 lg:pb-5">
+            <h1
+              className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight text-center mx-auto 
+           bg-gradient-to-b from-[#be57ff] via-[#8500f5] to-[#f8dfff] bg-clip-text text-transparent pb-1 md:pb-2 lg:pb-5"
+            >
               Full Stack Engineer
             </h1>
 
-            <p className="text-[#D1D5DB] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-center max-w-sm md:max-w-xl lg:max-w-3xl mx-auto">descption</p>
-
+            <p className="text-[#D1D5DB] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-center max-w-sm md:max-w-xl lg:max-w-3xl mx-auto">
+              descption
+            </p>
           </div>
 
           {/* Buttons */}
