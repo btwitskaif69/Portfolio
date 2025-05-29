@@ -36,7 +36,7 @@ export const ShinyButton = React.forwardRef(({ children, className, ...props }, 
       {...props}
     >
       <span
-        className="relative block size-full text-sm uppercase tracking-wide"
+        className="relative flex items-center justify-center w-full h-full text-sm uppercase tracking-wide"
         style={{
           maskImage:
             "linear-gradient(-75deg,var(--primary) calc(var(--x) + 20%),transparent calc(var(--x) + 30%),var(--primary) calc(var(--x) + 100%))",
