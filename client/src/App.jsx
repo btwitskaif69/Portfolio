@@ -26,6 +26,7 @@ const App = () => {
     </div>
 
       <FeaturedProjects/>
+
       <TextReveal>I am dedicated to transforming ideas into impactful realities, blending creativity, precision, and a deep passion for excellence to deliver work that truly makes a difference.</TextReveal>
       <ContactForm/>
       <Footer/>
