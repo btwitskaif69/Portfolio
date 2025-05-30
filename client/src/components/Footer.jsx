@@ -43,11 +43,13 @@ const Footer = ({
   return (
     <footer className="bg-black text-gray-300 border-t border-white">
       <div className="max-w-10xl mx-auto px-4 pt-8 sm:px-6 lg:px-8">
-        <div className="flex flex-col-reverse sm:flex-row justify-between items-end sm:items-start gap-10 sm:gap-0 mb-4">
+        <div className="flex flex-col sm:flex-row justify-between items-start gap-10 sm:gap-0 mb-4">
           {/* Left */}
-          <div className="space-y-4 sm:max-w-md">
-            <h2 className="text-2xl font-bold text-white mb-4">Get in Touch</h2>
-            <p className="text-gray-300 text-lg leading-relaxed">
+          <div className="space-y-4 sm:max-w-md w-full">
+            <h2 className="text-lg sm:text-base md:text-lg lg:text-2xl font-bold text-white mb-4">
+              Get in Touch
+            </h2>
+            <p className="text-sm sm:text-xs md:text-base lg:text-lg text-gray-300 leading-relaxed">
               I'm happy to connect, help out, or work together on something new. If you have an idea or just want to get in touch, feel free to email me or reach out on social media.
             </p>
             {/* Social Icons */}
@@ -59,8 +61,8 @@ const Footer = ({
                 <Linkedin className="w-6 h-6" />
               </a>
               <a href="https://x.com/btwitskaif69"
-              target="_blank"
-              rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                target="_blank"
+                rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
                 <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
@@ -69,15 +71,15 @@ const Footer = ({
                 <Mail className="w-6 h-6" />
               </a>
             </div>
-            <div className="text-start text-xl font-medium text-white mb-0">
-            <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
-          </div>
+            <div className="text-start text-xs sm:text-xs md:text-base lg:text-xl font-medium text-white mb-0">
+              <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
+            </div>
           </div>
 
           {/* Right */}
-          <nav className="flex flex-col items-end sm:items-end sm:pl-0  sm:max-w-md space-y-4 mb-4 sm:mb-0">
-            <h2 className="text-2xl font-bold text-white mb-4">[NAVIGATION]</h2>
-            <div className="flex flex-col justify-center items-end  text-lg mb-4">
+          <nav className="flex flex-col items-start sm:items-end sm:pl-0 sm:max-w-md space-y-4 w-full">
+            <h2 className="text-lg sm:text-base md:text-lg lg:text-2xl font-bold text-white mb-4">[NAVIGATION]</h2>
+            <div className="flex flex-col justify-start items-start text-base sm:text-sm md:text-base lg:text-xl mb-4 sm:justify-end sm:items-end">
               {navigationLinks.map((link) => (
                 <a 
                   key={link.href} 
@@ -90,13 +92,14 @@ const Footer = ({
             </div>
             {/* Local Time */}
             <div className="pt-2 mb-2">
-              <p className="text-xl font-medium text-white">
+              <p className="text-base sm:text-sm md:text-base lg:text-xl font-medium text-white">
                 Local time - {indiaTime} (IST)
               </p>
             </div>
-            <div className="email">
-              
-              <p className="text-xl font-medium text-white">Open to Work | Global Opportunities</p>
+            <div className="email flex items-center gap-2">
+              <p className="text-base sm:text-sm md:text-base lg:text-xl font-medium text-white">
+                Open to Work | Global Opportunities
+              </p>
             </div>
           </nav>
         </div>
@@ -104,11 +107,11 @@ const Footer = ({
         {/* Logo and copyright */}
         <div className="logo">
           <div className="mb-0">
-             <img 
-                src={logo}  // Use imported logo variable
-                alt={`${brandName} Logo`}
-                className="h-auto w-full flex items-end" // Adjusted size for better visibility
-              />
+            <img 
+              src={logo}
+              alt={`${brandName} Logo`}
+              className="h-auto w-full flex items-end"
+            />
           </div>
         </div>
       </div>
