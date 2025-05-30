@@ -1,7 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { AnimatedGradientText } from "./magicui/animated-gradient-text";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
@@ -10,9 +10,10 @@ import { ShinyButton } from "@/components/magicui/shiny-button";
 import resumeFile from "../assets/Resume.pdf";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import bg from "../assets/bg2.png";
-import {BookText} from "lucide-react";
+import { BookText } from "lucide-react";
 import { RainbowButton } from "./magicui/rainbow-button";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { ShineBorder } from "./magicui/shine-border";
 
 const Hero = () => {
   // const greetings = [
@@ -56,25 +57,35 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative overflow-hidden flex items-center justify-center min-h-screen bg-black py-20 background-size-110%"
-       style={{
-  backgroundImage: `url(${bg})`,
-  backgroundSize: "cover",
-  backgroundPosition: "bottom",
-  backgroundRepeat: "no-repeat",
-}}>
+    <section
+      className="relative overflow-hidden flex items-center justify-center min-h-screen bg-black py-20 background-size-110%"
+      style={{
+        backgroundImage: `url(${bg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "bottom",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <Spotlight />
       {/* Content */}
 
       <div className="relative z-10 w-full ">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 my-auto flex align-center justify-center flex-col items-center">
-          <Badge
-            variant="secondary"
-            className="rounded-full px-4 py-2 text-sm font-medium bg-transparent mb-5 outline-1 outline-white ">
-            <div className="w-2 h-2 bg-white mr-2 " />
-            Available for new opportunities
-          </Badge>
-
+          <div className="relative inline-flex items-center mb-5">
+            <Badge
+              variant="secondary"
+              className="rounded-full h-11 px-8 py-2 text-base font-medium bg-transparent text-white flex items-center gap-2 transition-all duration-200"
+            >
+              <div className="w-2 h-2 bg-white rounded-full mr-2" />
+              Available for new opportunities
+            </Badge>
+            <ShineBorder
+              borderWidth={1.5}
+              duration={15}
+              shineColor={["#be57ff", "#8500f5", "#f8dfff"]}
+              className="rounded-full"
+            />
+          </div>
           {/* Animated Greeting
           <div className="w-full flex justify-center mb-2">
             <AnimatedGradientText className="text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight text-center max-w-6xl mx-auto">
@@ -99,59 +110,71 @@ const Hero = () => {
             </h1>
 
             <p className="text-[#D1D5DB] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-center max-w-sm md:max-w-xl lg:max-w-3xl mx-auto">
-              Building with React.js, Node.js, Express, and MongoDB. Based in Delhi, India. Focused on solving problems with clean and practical solutions.
+              Building with React.js, Node.js, Express, and MongoDB. Based in
+              Delhi, India. Focused on solving problems with clean and practical
+              solutions.
             </p>
           </div>
 
           {/* Buttons */}
           <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 mb-5">
             <RainbowButton>View Projects</RainbowButton>
-            
-            <ShinyButton  onClick={handleDownload}>
-            <BookText className="mr-2" />
+
+            <ShinyButton onClick={handleDownload}>
+              <BookText className="mr-2" />
               Resume
             </ShinyButton>
-
-
           </div>
           <div className="flex space-x-6">
-  <a href="https://github.com/btwitskaif69" target="_blank" rel="noopener noreferrer">
-    <Button
-      variant="outline"
-      className="w-14 h-14 bg-transparent hover:bg-white/10 hover:backdrop-blur-md transition-all duration-200"
-    >
-      <Github className="h-6 w-6" />
-      <span className="sr-only">GitHub</span>
-    </Button>
-  </a>
-  <a href="https://linkedin.com/in/btwitskaif69" target="_blank" rel="noopener noreferrer">
-    <Button
-      variant="outline"
-      className="w-14 h-14 bg-transparent hover:bg-white/10 hover:backdrop-blur-md transition-all duration-200"
-    >
-      <Linkedin className="h-6 w-6" />
-      <span className="sr-only">LinkedIn</span>
-    </Button>
-  </a>
-  <a href="https://x.com/btwitskaif69" target="_blank" rel="noopener noreferrer">
-    <Button
-      variant="outline"
-      className="w-14 h-14 bg-transparent hover:bg-white/10 hover:backdrop-blur-md transition-all duration-200"
-    >
-      <Twitter className="h-6 w-6" />
-      <span className="sr-only">Twitter</span>
-    </Button>
-  </a>
-  <a href="mailto:mohdkaif18th@gmail.com">
-    <Button
-      variant="outline"
-      className="w-14 h-14 bg-transparent hover:bg-white/10 hover:backdrop-blur-md transition-all duration-200"
-    >
-      <Mail className="h-6 w-6" />
-      <span className="sr-only">Email</span>
-    </Button>
-  </a>
-</div>
+            <a
+              href="https://github.com/btwitskaif69"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                className="w-14 h-14 bg-transparent hover:bg-white/10 hover:backdrop-blur-md transition-all duration-200"
+              >
+                <Github className="h-6 w-6" />
+                <span className="sr-only">GitHub</span>
+              </Button>
+            </a>
+            <a
+              href="https://linkedin.com/in/btwitskaif69"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                className="w-14 h-14 bg-transparent hover:bg-white/10 hover:backdrop-blur-md transition-all duration-200"
+              >
+                <Linkedin className="h-6 w-6" />
+                <span className="sr-only">LinkedIn</span>
+              </Button>
+            </a>
+            <a
+              href="https://x.com/btwitskaif69"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                className="w-14 h-14 bg-transparent hover:bg-white/10 hover:backdrop-blur-md transition-all duration-200"
+              >
+                <Twitter className="h-6 w-6" />
+                <span className="sr-only">Twitter</span>
+              </Button>
+            </a>
+            <a href="mailto:mohdkaif18th@gmail.com">
+              <Button
+                variant="outline"
+                className="w-14 h-14 bg-transparent hover:bg-white/10 hover:backdrop-blur-md transition-all duration-200"
+              >
+                <Mail className="h-6 w-6" />
+                <span className="sr-only">Email</span>
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </section>
