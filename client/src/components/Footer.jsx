@@ -67,14 +67,14 @@ const Footer = ({
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-5">
-          <div className="text-center text-sm text-gray-400">
+          <div className="text-center text-sm text-gray-400 mb-5">
             <p>&copy; {new Date().getFullYear()} {brandName}. All rights reserved.</p>
           </div>
           <div className="mb-0">
              <img 
                 src={logo}  // Use imported logo variable
                 alt={`${brandName} Logo`}
-                className="h-90 w-auto flex items-end" // Adjusted size for better visibility
+                className="h-auto w-full flex items-end" // Adjusted size for better visibility
               />
           </div>
         </div>

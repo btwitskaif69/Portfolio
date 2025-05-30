@@ -118,13 +118,19 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 mb-5">
-            <RainbowButton>View Projects</RainbowButton>
+            <RainbowButton className="transform transition-transform duration-200 hover:scale-105">
+              View Projects
+            </RainbowButton>
 
-            <ShinyButton onClick={handleDownload}>
+            <ShinyButton
+              onClick={handleDownload}
+              className="transform transition-transform duration-200 hover:scale-105"
+            >
               <BookText className="mr-2" />
               Resume
             </ShinyButton>
           </div>
+
           <div className="flex space-x-6">
             <a
               href="https://github.com/btwitskaif69"
