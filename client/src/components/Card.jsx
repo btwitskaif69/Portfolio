@@ -10,7 +10,7 @@ const MobileCard = ({ title, catagory, description, src, techStack }) => (
       alt={title}
       className="h-full object-contain rounded-md mb-3"
     />
-    <p className="text-red-500 text-sm font-semibold uppercase tracking-wide">{title}</p>
+    <p className="bg-gradient-to-r from-[#be57ff] via-[#8500f5] to-[#f8dfff] bg-clip-text text-transparent text-sm font-semibold uppercase tracking-wide">{title}</p>
     <h2 className="text-2xl font-medium mb-2">{catagory}</h2>
     <p className="text-xs text-gray-300">{description}</p>
     {techStack?.length > 0 && (
@@ -61,7 +61,7 @@ const DesktopCard = ({ i, title, catagory, description, src, techStack, scale })
         </div>
 
         <div className="w-full md:w-1/2 flex flex-col justify-start py-10 text-left min-w-[30%]">
-          <p className="text-sm md:text-lg text-red-500 font-semibold uppercase tracking-widest">
+          <p className="text-sm md:text-lg font-semibold uppercase tracking-widest bg-gradient-to-r from-[#be57ff] via-[#8500f5] to-[#f8dfff] bg-clip-text text-transparent">
             {title}
           </p>
           <h2 className="sm:text-4xl md:text-xl lg:text-6xl font-medium mb-3">

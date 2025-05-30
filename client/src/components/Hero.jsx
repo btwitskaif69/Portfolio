@@ -81,7 +81,7 @@ const Hero = () => {
             </Badge>
             <ShineBorder
               borderWidth={1.5}
-              duration={15}
+              duration={10}
               shineColor={["#be57ff", "#8500f5", "#f8dfff"]}
               className="rounded-full"
             />
@@ -109,7 +109,7 @@ const Hero = () => {
               Full Stack Developer
             </h1>
 
-            <p className="text-[#D1D5DB] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-center max-w-sm md:max-w-xl lg:max-w-3xl mx-auto">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-center max-w-sm md:max-w-xl lg:max-w-3xl mx-auto">
               Building with React.js, Node.js, Express, and MongoDB. Based in
               Delhi, India. Focused on solving problems with clean and practical
               solutions.
@@ -118,13 +118,13 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 mb-5">
-            <RainbowButton className="transform transition-transform duration-200 hover:scale-105">
+            <RainbowButton className="transition-transform duration-300 ease-[cubic-bezier(.4,0,.2,1)] hover:scale-105 hover:-translate-y-1 focus:scale-105 focus:-translate-y-1">
               View Projects
             </RainbowButton>
 
             <ShinyButton
               onClick={handleDownload}
-              className="transform transition-transform duration-200 hover:scale-105"
+              className="transition-transform duration-300 ease-[cubic-bezier(.4,0,.2,1)] hover:scale-105 hover:-translate-y-1 focus:scale-105 focus:-translate-y-1"
             >
               <BookText className="mr-2" />
               Resume
