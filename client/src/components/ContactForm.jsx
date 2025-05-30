@@ -9,7 +9,7 @@ export function ContactForm() {
       <div className="relative overflow-hidden container mx-auto bg-black rounded-lg p-8 space-y-8 my-8 sm:mx-8 lg:mx-auto outline-2">
         <ShineBorder 
           borderWidth={1.5}
-          duration={15}
+          duration={10}
           shineColor={["#be57ff", "#8500f5", "#f8dfff"]} 
           className="rounded-lg"
         />
