@@ -4,8 +4,9 @@ export function AnimatedGradientText({
   children,
   className,
   speed = 1,
-  colorFrom = "#9810fa",
-  colorTo = "#f6339a",
+  colorFrom = "#be57ff",
+  colorVia = "#8500f5",
+  colorTo = "#f8dfff",
   ...props
 }) {
   return (
@@ -14,6 +15,7 @@ export function AnimatedGradientText({
         {
           "--bg-size": `${speed * 300}%`,
           "--color-from": colorFrom,
+          "--color-via": colorFrom,
           "--color-to": colorTo
         }
       }
