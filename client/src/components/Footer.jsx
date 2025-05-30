@@ -51,23 +51,25 @@ const Footer = ({
               I'm happy to connect, help out, or work together on something new. If you have an idea or just want to get in touch, feel free to email me or reach out on social media.
             </p>
             {/* Social Icons */}
-            <div className="flex space-x-4 pt-2">
-              <a href="github.com/btwitskaif69" className="text-gray-300 hover:text-white transition-colors">
+            <div className="flex space-x-4 pt-2 mb-2">
+              <a href="https://github.com/btwitskaif69" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a href="https://linkedin.com/in/btwitskaif69" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a href="https://x.com/btwitskaif69"
+              target="_blank"
+              rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
                 <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a href="mailto:mohdkaif18th@gmail.com" className="text-gray-300 hover:text-white transition-colors">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
-            <div className="text-start text-3xl font-medium text-white mb-0">
+            <div className="text-start text-xl font-medium text-white mb-0">
             <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
           </div>
           </div>
@@ -87,13 +89,14 @@ const Footer = ({
               ))}
             </div>
             {/* Local Time */}
-            <div className="pt-2">
-              <p className="text-xl font-medium text-white gap-1">
+            <div className="pt-2 mb-2">
+              <p className="text-xl font-medium text-white">
                 Local time - {indiaTime} (IST)
               </p>
             </div>
             <div className="email">
-              <p className="text-3xl font-medium text-white">mohdkaif18th@gmail.com</p>
+              
+              <p className="text-xl font-medium text-white">Open to Work | Global Opportunities</p>
             </div>
           </nav>
         </div>
