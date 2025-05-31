@@ -41,7 +41,7 @@ const Footer = ({
   }, []);
 
   return (
-    <footer className="bg-black text-gray-300 border-t border-white">
+    <footer className="bg-black text-gray-300 border-t border-white/20">
       <div className="max-w-10xl mx-auto px-4 pt-8 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row justify-between items-start gap-10 sm:gap-0 mb-4">
           {/* Left */}

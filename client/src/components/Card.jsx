@@ -8,7 +8,7 @@ const MobileCard = ({ title, catagory, description, src, techStack }) => (
     <img
       src={src}
       alt={title}
-      className="h-full object-contain rounded-md mb-3"
+      className="w-full h-auto object-contain rounded-md mb-3"
     />
     <p className="bg-gradient-to-r from-[#be57ff] via-[#8500f5] to-[#f8dfff] bg-clip-text text-transparent text-sm font-semibold uppercase tracking-wide">{title}</p>
     <h2 className="text-2xl font-medium mb-2">{catagory}</h2>
@@ -47,8 +47,7 @@ const DesktopCard = ({ i, title, catagory, description, src, techStack, scale })
       }}
     >
       <motion.div
-        className="hidden sm:flex flex-col md:flex-row w-full md:w-[90%] h-[85%] md:h-[90%] rounded-xl md:rounded-2xl p-4 md:p-5 gap-6 md:gap-10 text-white bg-black outline-1"
-      >
+        className="hidden sm:flex flex-col md:flex-row w-full md:w-[90%] h-[85%] md:h-[90%] rounded-xl md:rounded-2xl p-4 md:p-5 gap-6 md:gap-10 text-white bg-black outline-1">
         <div className="w-full md:w-[80%] h-[35vh] md:h-full rounded-lg overflow-hidden shadow-xl">
           <motion.div className="w-full h-full" style={{ scale: imageScale }}>
             <img
