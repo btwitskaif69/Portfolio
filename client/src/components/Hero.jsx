@@ -119,14 +119,14 @@ const Hero = () => {
           {/* Buttons */}
           <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 mb-5">
             <RainbowButton className="transition-transform duration-300 ease-[cubic-bezier(.4,0,.2,1)] hover:scale-105 hover:-translate-y-1 focus:scale-105 focus:-translate-y-1">
-              View Projects
+              Visit Projects
             </RainbowButton>
 
             <ShinyButton
               onClick={handleDownload}
               className="transition-transform duration-300 ease-[cubic-bezier(.4,0,.2,1)] hover:scale-105 hover:-translate-y-1 focus:scale-105 focus:-translate-y-1"
             >
-              <BookText className="mr-2" />
+              <BookText className="w-5 h-5 mr-2" />
               Resume
             </ShinyButton>
           </div>

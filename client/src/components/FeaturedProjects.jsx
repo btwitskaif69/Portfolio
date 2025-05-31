@@ -41,7 +41,8 @@ const FeaturedProjects = () => {
             description={project.description}
             techStack={project.techStack}
             src={project.src}
-            url={project.link}
+            link={project.link}
+            source={project.source}
             color={project.color}
             progress={scrollYProgress}
             range={range}

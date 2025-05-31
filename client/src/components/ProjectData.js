@@ -15,6 +15,8 @@ export const projects = [
       "Skill Set is a global online learning platform that offers anyone, anywhere, access to online courses and degrees from leading universities and companies.",
     src: image1,
     techStack: ["React", "Node.js", "MongoDB","Express", "RESTful API", "JWT", "Bootstrap"],
+    link:"https://skill-set-app.vercel.app",
+    source:"https://github.com/btwitskaif69/Skill-Set"
   },
   {
     title: "LibraryHub",
@@ -23,14 +25,18 @@ export const projects = [
       "LibraryHub is a comprehensive library management system that streamlines the process of managing library resources, including books, members, and transactions.",
     src: image2,
     techStack: ["Laravel", "Bootstrap", "Axios", "MongoDB"],
+    link:"https://btwitskaif.vercel.app",
+    source:"https://github.com/btwitskaif69/Book-Library-Management"
   },
     {
     title: "Sydney Events",
     catagory: "Event Ticketing Platform",
     description:
-      "Sydney Events is an event ticketing platform that allows users to discover, book, and manage tickets for various events happening in Sydney. It provides a seamless experience for both event organizers and attendees.",
+      "Sydney Events is an event ticketing platform that allows users to discover, book, and manage tickets for various events",
     src: image3,
     techStack: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "RESTful API", "Puppeteer"],
+    link:"https://sydney-events-finder.vercel.app",
+    source:"https://github.com/btwitskaif69/Sydney-Events"
   },
   {
     title: "Pro Text Editor",
@@ -39,5 +45,7 @@ export const projects = [
       "Pro Text Editor is a versatile text utility tool that allows you to edit, format, and manipulate text with ease. It includes features like word count, character count, and more.",
     src: image4,
     techStack: ["React", "Bootstrap"],
+    link:"https://protexteditor.vercel.app",
+    source:"https://github.com/btwitskaif69/Pro-Text-Editor"
   },
 ];

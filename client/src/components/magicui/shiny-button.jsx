@@ -29,14 +29,14 @@ export const ShinyButton = React.forwardRef(({ children, className, ...props }, 
     <motion.button
       ref={ref}
       className={cn(
-        "relative rounded-lg px-6 py-2 font-medium transition-shadow duration-300 ease-in-out bg-gradient-to-br from-[#6e00b8] via-[#4d0099] to-[#a76dd4] text-white hover:shadow-lg w-full sm:w-auto",
+        "relative rounded-lg px-6 py-2 font-medium text-base transition-shadow duration-300 ease-in-out bg-gradient-to-br from-[#6e00b8] via-[#4d0099] to-[#a76dd4] text-white hover:shadow-lg w-full sm:w-auto",
         className
       )}
       {...animationProps}
       {...props}
     >
       <span
-        className="relative flex items-center justify-center w-full h-full text-sm uppercase tracking-wide"
+        className="relative flex items-center justify-center w-full h-full text-base font-medium tracking-wide"
         style={{
           maskImage:
             "linear-gradient(-75deg,var(--primary) calc(var(--x) + 20%),transparent calc(var(--x) + 30%),var(--primary) calc(var(--x) + 100%))",

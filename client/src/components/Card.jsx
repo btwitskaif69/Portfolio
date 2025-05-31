@@ -1,8 +1,10 @@
 'use client';
 import { useTransform, motion, useScroll } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
+import { Button } from "@/components/ui/button"
+import { Globe, Github } from 'lucide-react';
 
-const MobileCard = ({ title, catagory, description, src, techStack }) => (
+const MobileCard = ({ title, catagory, description, src, techStack, link, source }) => (
   <div className="m-4">
   <div className="w-full bg-black text-white rounded-lg p-4 mb-4 shadow-md outline-2">
     <img
@@ -25,11 +27,31 @@ const MobileCard = ({ title, catagory, description, src, techStack }) => (
         ))}
       </div>
     )}
+                <div className="w-full flex flex-row items-center justify-start gap-2 mt-4">
+              <a href={link} target="_blank" rel="noopener noreferrer" className="inline-block">
+
+              <Button className="font-medium px-2 py-1 text-xs h-7 min-w-0">
+              <Globe className="w-4 h-4 mr-1" />
+              View
+              </Button>
+
+              </a>
+
+              <a href={source} target="_blank" rel="noopener noreferrer" className="inline-block">
+
+              <Button variant="outline" className="font-medium px-2 py-1 text-xs h-7 min-w-0">
+              <Github className="w-4 h-4 mr-1" />
+              Code
+              </Button>
+
+              </a>
+
+            </div>
   </div>
   </div>
 );
 
-const DesktopCard = ({ i, title, catagory, description, src, techStack, scale }) => {
+const DesktopCard = ({ i, title, catagory, description, src, techStack, link, source}) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -47,7 +69,7 @@ const DesktopCard = ({ i, title, catagory, description, src, techStack, scale })
       }}
     >
       <motion.div
-        className="hidden sm:flex flex-col md:flex-row w-full md:w-[90%] h-[85%] md:h-[90%] rounded-xl md:rounded-2xl p-4 md:p-5 gap-6 md:gap-10 text-white bg-black outline-1">
+        className="hidden sm:flex flex-col md:flex-row w-full md:w-[95%] h-[85%] md:h-[90%] rounded-xl md:rounded-2xl p-4 md:p-5 gap-6 md:gap-8 text-white bg-black outline-1">
         <div className="w-full md:w-[80%] h-[35vh] md:h-full rounded-lg overflow-hidden shadow-xl">
           <motion.div className="w-full h-full" style={{ scale: imageScale }}>
             <img
@@ -63,7 +85,7 @@ const DesktopCard = ({ i, title, catagory, description, src, techStack, scale })
           <p className="text-sm md:text-lg font-semibold uppercase tracking-widest bg-gradient-to-r from-[#be57ff] via-[#8500f5] to-[#f8dfff] bg-clip-text text-transparent">
             {title}
           </p>
-          <h2 className="sm:text-4xl md:text-xl lg:text-6xl font-medium mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text4xl lg:text-5xl xl:text-6xl font-medium mb-3 ">
             {catagory}
           </h2>
           <div className="text-gray-300">
@@ -85,6 +107,29 @@ const DesktopCard = ({ i, title, catagory, description, src, techStack, scale })
                 ))}
               </div>
             )}
+          
+            
+            <div className="w-full flex flex-row items-center justify-start gap-2 mt-4">
+
+              <a href={link} target="_blank" rel="noopener noreferrer" className="inline-block">
+
+              <Button className="font-medium">
+              <Globe className="w-4 h-4 mr-1" />
+              View
+              </Button>
+
+              </a>
+
+              <a href={source} target="_blank" rel="noopener noreferrer" className="inline-block">
+
+              <Button variant="outline" className="font-medium">
+              <Github className="w-4 h-4 mr-1" />
+              Code
+              </Button>
+
+              </a>
+
+            </div>
           </div>
         </div>
       </motion.div>
