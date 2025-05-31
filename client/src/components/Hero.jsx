@@ -99,7 +99,7 @@ const Hero = () => {
               className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight  text-center  mx-auto 
             "
             >
-              Hi, I'm Mohd Kaif
+              Hi, I'm Mohd Kaif Hey
             </h1>
 
             <h1
