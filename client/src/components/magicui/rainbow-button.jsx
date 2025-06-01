@@ -8,7 +8,7 @@ const rainbowButtonVariants = cva(
     "relative cursor-pointer group transition-all animate-rainbow",
     "inline-flex items-center justify-center gap-2 shrink-0",
     "rounded-lg outline-none focus-visible:ring-[3px] aria-invalid:border-destructive", // changed to rounded-lg
-    "text-base font-bold whitespace-nowrap", // match shiny button font size
+    "text-base font-semibold whitespace-nowrap", // match shiny button font size
     "h-11 px-8 py-2", // match shiny button height and padding
     "w-full sm:w-auto", // responsive width
     "disabled:pointer-events-none disabled:opacity-50",

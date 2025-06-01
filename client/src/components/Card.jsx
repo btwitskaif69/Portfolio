@@ -31,8 +31,8 @@ const MobileCard = ({ title, catagory, description, src, techStack, link, source
               <a href={link} target="_blank" rel="noopener noreferrer" className="inline-block">
 
               <Button className="font-medium px-2 py-1 text-xs h-7 min-w-0">
-              <Globe className="w-4 h-4 mr-1" />
-              View
+              <Globe className="w-4 h-4" />
+              View Project
               </Button>
 
               </a>
@@ -40,8 +40,8 @@ const MobileCard = ({ title, catagory, description, src, techStack, link, source
               <a href={source} target="_blank" rel="noopener noreferrer" className="inline-block">
 
               <Button variant="outline" className="font-medium px-2 py-1 text-xs h-7 min-w-0">
-              <Github className="w-4 h-4 mr-1" />
-              Code
+              <Github className="w-4 h-4" />
+              Source Code
               </Button>
 
               </a>
@@ -114,8 +114,8 @@ const DesktopCard = ({ i, title, catagory, description, src, techStack, link, so
               <a href={link} target="_blank" rel="noopener noreferrer" className="inline-block">
 
               <Button className="font-medium">
-              <Globe className="w-4 h-4 mr-1" />
-              View
+              <Globe className="w-4 h-4" />
+              View Project
               </Button>
 
               </a>
@@ -123,8 +123,8 @@ const DesktopCard = ({ i, title, catagory, description, src, techStack, link, so
               <a href={source} target="_blank" rel="noopener noreferrer" className="inline-block">
 
               <Button variant="outline" className="font-medium">
-              <Github className="w-4 h-4 mr-1" />
-              Code
+              <Github className="w-4 h-4" />
+              Source Code
               </Button>
 
               </a>
