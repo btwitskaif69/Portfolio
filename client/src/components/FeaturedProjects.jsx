@@ -18,7 +18,7 @@ const FeaturedProjects = () => {
   const targetScale = 0.9;
 
   return (
-    <div ref={containerRef} className="my-20">
+    <div id="featured-projects-section" ref={containerRef} className="my-20">
       {/* Added heading container */}
       <div className="w-full flex justify-center text-center px-4 mb-7 md:mb-8 lg:mb-5">
   <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium">

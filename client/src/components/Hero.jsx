@@ -56,6 +56,37 @@ const Hero = () => {
     document.body.removeChild(link);
   };
 
+  // Add scroll handler for "Visit Projects"
+  const handleScrollToProjects = () => {
+    const section = document.getElementById("featured-projects-section");
+    if (section) {
+      setTimeout(() => {
+        // Custom smooth and slow scroll
+        const targetY = section.getBoundingClientRect().top + window.scrollY;
+        const startY = window.scrollY;
+        const distance = targetY - startY;
+        const duration = 2000; // duration in ms (increase for slower scroll)
+        let startTime = null;
+
+        function animateScroll(currentTime) {
+          if (!startTime) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const progress = Math.min(timeElapsed / duration, 1);
+          window.scrollTo(0, startY + distance * easeInOutQuad(progress));
+          if (progress < 1) {
+            requestAnimationFrame(animateScroll);
+          }
+        }
+
+        function easeInOutQuad(t) {
+          return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+        }
+
+        requestAnimationFrame(animateScroll);
+      }, 350); // delay before scrolling
+    }
+  };
+
   return (
     <section
       className="relative overflow-hidden flex items-center justify-center min-h-screen bg-black py-20 background-size-110%"
@@ -118,10 +149,12 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 mb-5">
-            <RainbowButton className="transition-transform duration-300 ease-[cubic-bezier(.4,0,.2,1)] hover:scale-105 hover:-translate-y-1 focus:scale-105 focus:-translate-y-1">
+            <RainbowButton
+              onClick={handleScrollToProjects}
+              className="transition-transform duration-300 ease-[cubic-bezier(.4,0,.2,1)] hover:scale-105 hover:-translate-y-1 focus:scale-105 focus:-translate-y-1"
+            >
               Visit Projects
             </RainbowButton>
-
             <ShinyButton
               onClick={handleDownload}
               className="transition-transform duration-300 ease-[cubic-bezier(.4,0,.2,1)] hover:scale-105 hover:-translate-y-1 focus:scale-105 focus:-translate-y-1"

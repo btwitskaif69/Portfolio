@@ -5,7 +5,7 @@ import { ShineBorder } from "@/components/magicui/shine-border";
 
 export function ContactForm() {
   return (
-    <div className="p-5 align-center flex flex-col items-center justify-center bg-black">
+    <div className="align-center flex flex-col items-center justify-center bg-black py-10">
       <div className="relative overflow-hidden w-[95%] mx-auto bg-black rounded-lg p-8 space-y-8 my-8 sm:mx-8 lg:mx-auto outline-2">
         <ShineBorder 
           borderWidth={1.5}
