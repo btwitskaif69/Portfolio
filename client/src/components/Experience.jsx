@@ -1,48 +1,85 @@
-// components/Experience.jsx
-import React from 'react';
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { CalendarDays, MapPin, Briefcase } from "lucide-react";
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { CalendarDays, MapPin, Building2 } from "lucide-react"
 
-const Experience = () => {
+const experienceData = [
+  {
+    company: "Cognifyz Technologies",
+    role: "Full Stack Developer",
+    duration: "January 2025 - February 2025 (2 months)",
+    location: "Nagpur, Maharashtra, India",
+    description: [
+      "Created responsive web interfaces using HTML, CSS, JavaScript, and Bootstrap",
+      "Developed and connected REST APIs for smooth data flow between frontend and backend",
+      "Built backend features using Node.js, Express.js, and MongoDB",
+      "Added user authentication, form checks, and basic create/read/update/delete functions",
+      "Gained solid experience working across the full stack in real-world projects",
+    ],
+    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "Node.js", "Express.js", "MongoDB", "REST APIs"],
+  },
+]
+
+export default function Experience() {
   return (
-    <div className="p-6 bg-gray-50 min-h-screen">
-      <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">Experience</h2>
-      
-      <Card className="max-w-3xl mx-auto shadow-xl">
-        <CardContent className="p-6 space-y-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <Briefcase className="text-primary" />
-              <h3 className="text-xl font-semibold text-gray-900">
-                Full Stack Developer
-              </h3>
-            </div>
-            <Badge variant="default">Internship</Badge>
-          </div>
+    <div className="w-full max-w-4xl mx-auto p-6">
+      <div className="mb-8">
+        <h2 className="text-3xl font-bold tracking-tight mb-2">Experience</h2>
+        <p className="text-muted-foreground">Professional work experience and internships</p>
+      </div>
 
-          <div className="flex flex-col sm:flex-row sm:justify-between text-sm text-gray-600">
-            <div className="flex items-center gap-2">
-              <CalendarDays className="w-4 h-4" />
-              <span>Jan 2025 - Feb 2025</span>
-            </div>
-            <div className="flex items-center gap-2 mt-2 sm:mt-0">
-              <MapPin className="w-4 h-4" />
-              <span>Nagpur, Maharashtra, India</span>
-            </div>
-          </div>
+      <div className="space-y-6">
+        {experienceData.map((experience, index) => (
+          <Card key={index} className="w-full">
+            <CardHeader>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <div className="space-y-1">
+                  <CardTitle className="text-xl font-semibold flex items-center gap-2">
+                    <Building2 className="h-5 w-5 text-primary" />
+                    {experience.company}
+                  </CardTitle>
+                  <CardDescription className="text-lg font-medium text-foreground">{experience.role}</CardDescription>
+                </div>
+              </div>
 
-          <ul className="list-disc list-inside text-gray-700 mt-4 space-y-2">
-            <li>Created responsive web interfaces using HTML, CSS, JavaScript, and Bootstrap.</li>
-            <li>Developed and connected REST APIs for smooth data flow between frontend and backend.</li>
-            <li>Built backend features using Node.js, Express.js, and MongoDB.</li>
-            <li>Implemented user authentication, form validations, and CRUD operations.</li>
-            <li>Gained practical experience working across the full stack on real-world projects.</li>
-          </ul>
-        </CardContent>
-      </Card>
+              <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
+                <div className="flex items-center gap-1">
+                  <CalendarDays className="h-4 w-4" />
+                  <span>{experience.duration}</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <MapPin className="h-4 w-4" />
+                  <span>{experience.location}</span>
+                </div>
+              </div>
+            </CardHeader>
+
+            <CardContent className="space-y-4">
+              <div>
+                <h4 className="font-medium mb-3">Key Responsibilities & Achievements:</h4>
+                <ul className="space-y-2">
+                  {experience.description.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                      <span className="text-sm leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="font-medium mb-3">Technologies Used:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {experience.technologies.map((tech, techIndex) => (
+                    <Badge key={techIndex} variant="secondary" className="text-xs">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
     </div>
-  );
-};
-
-export default Experience;
+  )
+}

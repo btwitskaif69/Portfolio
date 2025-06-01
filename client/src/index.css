@@ -146,7 +146,7 @@
 
 /* Style the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background-color: #be57ff; /* your desired color */
+  background-color: #8500f5; /* your desired color */
   border-radius: 10px;
   border: 2px solid transparent; /* Optional: adds space around the thumb */
   background-clip: content-box; /* Ensures the border doesn't affect the thumb's background */
