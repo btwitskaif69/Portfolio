@@ -161,3 +161,11 @@
 ::-webkit-scrollbar-track {
   background-color: #000000;
 }
+::selection {
+  background: #8500f5; /* Yellow background */
+  color: #ffffff;         /* Black text */
+}
+  ::-moz-selection {
+  background: #8500f5; /* Yellow background */
+  color: #ffffff;         /* Black text */
+  }

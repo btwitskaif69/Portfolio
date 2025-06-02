@@ -85,7 +85,7 @@ const DesktopCard = ({ i, title, catagory, description, src, techStack, link, so
           </motion.div>
         </div>
 
-        <div className="w-full md:w-1/2 flex flex-col justify-start py-10 text-left min-w-[30%]">
+        <div className="w-full md:w-1/2 flex flex-col justify-center py-10 text-left min-w-[30%]">
           <p className="text-sm md:text-lg font-semibold uppercase tracking-widest bg-gradient-to-r from-[#be57ff] via-[#8500f5] to-[#f8dfff] bg-clip-text text-transparent">
             {title}
           </p>
@@ -96,7 +96,7 @@ const DesktopCard = ({ i, title, catagory, description, src, techStack, link, so
             <p className="text-lg md:text-xl text-white font-semibold mt-5 mb-1">
               About
             </p>
-            <p className="text-base md:text-md leading-relaxed">
+            <p className="text-base md:text-[0.9rem] lg:text-lg leading-relaxed">
               {description}
             </p>
             {techStack?.length > 0 && (

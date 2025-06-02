@@ -10,6 +10,7 @@ import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import FeaturedProjects from './components/FeaturedProjects';
 import SmoothScrollProvider from '@/components/SmoothScrollProvider';
 import Experience from './components/Experience';
+import StackingCardsDemo from './fancy/components/blocks/stacking-cards-demo';
 
 const App = () => {
 
@@ -28,6 +29,7 @@ const App = () => {
 
       <FeaturedProjects/>
       {/* <Experience/> */}
+      {/* <StackingCardsDemo/> */}
 
       <TextReveal>I am dedicated to transforming ideas into impactful realities, blending creativity, precision, and a deep passion for excellence to deliver work that truly makes a difference.</TextReveal>
       <ContactForm/>
