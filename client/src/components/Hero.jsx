@@ -9,7 +9,7 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import { ShinyButton } from "@/components/magicui/shiny-button";
 import resumeFile from "../assets/Resume.pdf";
 import { Spotlight } from "@/components/ui/spotlight-new";
-import bg from "../assets/bg2.png";
+import bg from "../assets/bg.png";
 import { BookText } from "lucide-react";
 import { RainbowButton } from "./magicui/rainbow-button";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
