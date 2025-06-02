@@ -71,7 +71,11 @@ const DesktopCard = ({ i, title, catagory, description, src, techStack, link, so
       <motion.div
         className="hidden sm:flex flex-col md:flex-row w-full md:w-[95%] h-[85%] md:h-[90%] rounded-xl md:rounded-2xl p-4 md:p-5 gap-6 md:gap-8 text-white bg-black outline-1">
         <div className="w-full md:w-[80%] h-[35vh] md:h-full rounded-lg overflow-hidden shadow-xl">
-          <motion.div className="w-full h-full" style={{ scale: imageScale }}>
+          <motion.div
+            className="w-full h-full cursor-pointer"
+            style={{ scale: imageScale }}
+            onClick={() => window.open(link, "_blank")}
+          >
             <img
               src={src}
               alt={title}
