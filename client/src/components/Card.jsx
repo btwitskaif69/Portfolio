@@ -6,7 +6,9 @@ import { Globe, Github } from 'lucide-react';
 
 const MobileCard = ({ title, catagory, description, src, techStack, link, source }) => (
   <div className="m-4">
-  <div className="w-full bg-black text-white rounded-lg p-4 mb-4 shadow-md outline-2">
+  <div className="w-full bg-black text-white rounded-lg p-4 mb-4 shadow-md outline-2"
+   onClick={() => window.open(link, "_blank")}
+  >
     <img
       src={src}
       alt={title}

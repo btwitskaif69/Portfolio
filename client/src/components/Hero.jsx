@@ -110,7 +110,7 @@ const Hero = () => {
                sm:h-11 sm:px-8 sm:py-2 sm:text-base sm:gap-2"
   >
     <div className="w-1.5 h-1.5 bg-white rounded-full mr-1 sm:w-2 sm:h-2 sm:mr-2" />
-    <span className="whitespace-nowrap text-[0.6rem] sm:text-lg">Available for new opportunities</span>
+    <span className="whitespace-nowrap text-[0.7rem] sm:text-lg">Available for new opportunities</span>
   </Badge>
   <ShineBorder
     borderWidth={1.5}
