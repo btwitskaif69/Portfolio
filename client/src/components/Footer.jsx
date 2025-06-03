@@ -97,6 +97,7 @@ const Footer = ({
               </p>
             </div>
             <div className="email flex items-center gap-2">
+              <Globe className="w-5 h-5" />
               <p className="text-base sm:text-sm md:text-base lg:text-xl font-medium text-white">
                 Open to Work | Global Opportunities
               </p>
