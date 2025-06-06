@@ -4,7 +4,7 @@ import logo from '@/assets/logo.svg'; // Make sure this path is correct
 
 const defaultNavigationLinks = [
   { href: "/Projects", label: "Projects" },
-  { href: "/Projects", label: "Experience" },
+  // { href: "/Projects", label: "Experience" },
   { href: "/services", label: "Contact" },
   { href: "/Projects", label: "Resume" },
 ];
