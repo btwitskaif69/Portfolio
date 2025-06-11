@@ -3,9 +3,8 @@ import { Facebook, Twitter, Linkedin, Github, Mail, Globe } from "lucide-react";
 import logo from '@/assets/logo.svg'; // Make sure this path is correct
 
 const defaultNavigationLinks = [
-  { href: "/Projects", label: "Projects" },
-  // { href: "/Projects", label: "Experience" },
-  { href: "/services", label: "Contact" },
+  { href: "#featured-projects-section", label: "Projects" },
+  { href: "#contact-form-section", label: "Contact" },
   { href: "/Projects", label: "Resume" },
 ];
 
@@ -80,15 +79,50 @@ const Footer = ({
           <nav className="flex flex-col items-start sm:items-end sm:pl-0 sm:max-w-md space-y-4 w-full">
             <h2 className="text-lg sm:text-base md:text-lg lg:text-2xl font-bold text-white mb-4">[NAVIGATION]</h2>
             <div className="flex flex-col justify-start items-start text-base sm:text-sm md:text-base lg:text-xl mb-4 sm:justify-end sm:items-end">
-              {navigationLinks.map((link) => (
-                <a 
-                  key={link.href} 
-                  href={link.href} 
-                  className="hover:text-gray-400 transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
+              {navigationLinks.map((link) => {
+                // Custom smooth and slow scroll for internal anchors
+                const handleClick = (e) => {
+                  if (link.href === "#featured-projects-section" || link.href === "#contact-form-section") {
+                    e.preventDefault();
+                    const section = document.querySelector(link.href);
+                    if (section) {
+                      setTimeout(() => {
+                        const targetY = section.getBoundingClientRect().top + window.scrollY;
+                        const startY = window.scrollY;
+                        const distance = targetY - startY;
+                        const duration = 2000; // ms, match Hero
+                        let startTime = null;
+
+                        function animateScroll(currentTime) {
+                          if (!startTime) startTime = currentTime;
+                          const timeElapsed = currentTime - startTime;
+                          const progress = Math.min(timeElapsed / duration, 1);
+                          window.scrollTo(0, startY + distance * easeInOutQuad(progress));
+                          if (progress < 1) {
+                            requestAnimationFrame(animateScroll);
+                          }
+                        }
+
+                        function easeInOutQuad(t) {
+                          return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+                        }
+
+                        requestAnimationFrame(animateScroll);
+                      }, 100); // optional delay
+                    }
+                  }
+                };
+                return (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={handleClick}
+                    className="hover:text-gray-400 transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                );
+              })}
             </div>
             {/* Local Time */}
             <div className="pt-2 mb-2">
