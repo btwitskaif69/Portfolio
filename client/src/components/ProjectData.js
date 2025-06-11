@@ -25,7 +25,7 @@ export const projects = [
       "LibraryHub is a comprehensive library management system that streamlines the process of managing library resources, including books, members, and transactions.",
     src: image2,
     techStack: ["Laravel", "Bootstrap", "Axios", "MongoDB"],
-    link:"https://btwitskaif.vercel.app",
+    link:"https://library-hub-app.vercel.app",
     source:"https://github.com/btwitskaif69/Book-Library-Management"
   },
     {

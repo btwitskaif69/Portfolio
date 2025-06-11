@@ -23,15 +23,6 @@ export function ContactForm() {
             <p className="text-lg text-gray-300 leading-relaxed">
               I'd love to hear about your project. Let's see how we can team up.
             </p>
-            <p className="text-gray-400">
-              Or schedule a call directly using my{" "}
-              <a 
-                href="#" 
-                className="underline text-blue-400 hover:text-blue-300 transition-colors"
-              >
-                calendar below
-              </a>.
-            </p>
           </div>
         </div>
 
