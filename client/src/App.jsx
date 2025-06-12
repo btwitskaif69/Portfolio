@@ -10,7 +10,6 @@ import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import FeaturedProjects from './components/FeaturedProjects';
 import SmoothScrollProvider from '@/components/SmoothScrollProvider';
 import Experience from './components/Experience';
-import StackingCardsDemo from './fancy/components/blocks/stacking-cards-demo';
 
 const App = () => {
 
