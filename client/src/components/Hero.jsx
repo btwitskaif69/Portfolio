@@ -145,9 +145,7 @@ const Hero = () => {
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-center max-w-sm md:max-w-xl lg:max-w-3xl mx-auto">
-              Building with React.js, Node.js, Express, and MongoDB. Based in
-              Delhi, India. Focused on solving problems with clean and practical
-              solutions.
+              Based in Delhi, 23 years old, currently pursuing a BCA. Skilled in React.js, Node.js, Express, and MongoDB. Focused on building reliable and maintainable web applications.
             </p>
           </div>
 
