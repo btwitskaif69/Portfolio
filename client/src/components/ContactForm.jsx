@@ -19,33 +19,36 @@ export function ContactForm() {
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setStatus(null);
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+  setStatus(null);
 
-    try {
-      const response = await fetch("'https://btwitskaif-api.vercel.app/api/contact", {
+  try {
+    const response = await fetch(
+      `${import.meta.env.VITE_APP_BACKEND_URL}/api/contact`,
+      {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setStatus("success");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setStatus("error");
       }
-    } catch (error) {
-      console.error("Submission error:", error);
+    );
+
+    const data = await response.json();
+
+    if (data.success) {
+      setStatus("success");
+      setFormData({ name: "", email: "", message: "" });
+    } else {
       setStatus("error");
-    } finally {
-      setIsSubmitting(false);
     }
-  };
+  } catch (error) {
+    console.error("Submission error:", error);
+    setStatus("error");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <div
