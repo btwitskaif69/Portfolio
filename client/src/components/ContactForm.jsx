@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ShineBorder } from "@/components/magicui/shine-border";
-import { toast } from "sonner";
+import { Toaster, toast } from "@/components/ui/sonner"; // ✅ FIXED
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -22,9 +22,9 @@ export function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validation: Check if any field is empty
+    // Validation
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
-      toast.error("Please fill in all fields before submitting the form.", {
+      toast.error("Please fill in all fields.", {
         description: "All fields are required.",
       });
       return;
@@ -45,19 +45,19 @@ export function ContactForm() {
       const data = await response.json();
 
       if (data.success) {
-        toast.success("Your message was sent successfully!", {
-          description: "Message sent!",
+        toast.success("Message sent!", {
+          description: "Your message was sent successfully.",
         });
         setFormData({ name: "", email: "", message: "" });
       } else {
-        toast.error("Something went wrong. Please try again.", {
-          description: "Error",
+        toast.error("Failed to send message.", {
+          description: "Something went wrong. Please try again.",
         });
       }
     } catch (error) {
       console.error("Submission error:", error);
-      toast.error("Something went wrong. Please try again.", {
-        description: "Error",
+      toast.error("Error occurred.", {
+        description: "Something went wrong. Please try again.",
       });
     } finally {
       setIsSubmitting(false);
@@ -69,6 +69,9 @@ export function ContactForm() {
       id="contact-form-section"
       className="align-center flex flex-col items-center justify-center bg-black py-10"
     >
+      {/* Mount toaster here */}
+      <Toaster /> {/* ✅ FIXED */}
+
       <div className="relative overflow-hidden w-[92%] bg-black rounded-lg p-8 space-y-8 my-8 outline-2">
         <ShineBorder
           borderWidth={1.5}
@@ -143,4 +146,4 @@ export function ContactForm() {
       </div>
     </div>
   );
-}
+}s
