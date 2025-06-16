@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ShineBorder } from "@/components/magicui/shine-border";
+import { toast } from "sonner"; // <-- Use Sonner's toast
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -12,43 +13,47 @@ export function ContactForm() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [status, setStatus] = useState(null); // 'success' | 'error' | null
 
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  setIsSubmitting(true);
-  setStatus(null);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  try {
-    const response = await fetch(
-      `${import.meta.env.VITE_APP_BACKEND_URL}/api/contact`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_APP_BACKEND_URL}/api/contact`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast.success("Your message was sent successfully!", {
+          description: "Message sent!",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        toast.error("Something went wrong. Please try again.", {
+          description: "Error",
+        });
       }
-    );
-
-    const data = await response.json();
-
-    if (data.success) {
-      setStatus("success");
-      setFormData({ name: "", email: "", message: "" });
-    } else {
-      setStatus("error");
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast.error("Something went wrong. Please try again.", {
+        description: "Error",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-  } catch (error) {
-    console.error("Submission error:", error);
-    setStatus("error");
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+  };
 
   return (
     <div
@@ -122,13 +127,6 @@ const handleSubmit = async (e) => {
           >
             {isSubmitting ? "Sending..." : "Send"}
           </Button>
-
-          {status === "success" && (
-            <p className="text-green-500 text-center">Message sent successfully!</p>
-          )}
-          {status === "error" && (
-            <p className="text-red-500 text-center">Something went wrong. Please try again.</p>
-          )}
         </form>
       </div>
     </div>
