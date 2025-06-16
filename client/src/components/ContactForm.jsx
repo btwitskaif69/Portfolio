@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ShineBorder } from "@/components/magicui/shine-border";
-import { toast } from "sonner"; // <-- Use Sonner's toast
+import { toast } from "sonner";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -21,6 +21,15 @@ export function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validation: Check if any field is empty
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      toast.error("Please fill in all fields before submitting the form.", {
+        description: "All fields are required.",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -88,6 +97,7 @@ export function ContactForm() {
                   onChange={handleChange}
                   placeholder="John Doe"
                   className="h-12 text-base bg-black border-gray-700 text-white focus-visible:ring-blue-400"
+                  required
                 />
               </div>
 
@@ -102,6 +112,7 @@ export function ContactForm() {
                   onChange={handleChange}
                   placeholder="your-email@email.com"
                   className="h-12 text-base bg-black border-gray-700 text-white focus-visible:ring-blue-400"
+                  required
                 />
               </div>
             </div>
@@ -116,6 +127,7 @@ export function ContactForm() {
                 onChange={handleChange}
                 placeholder="Write your message here..."
                 className="min-h-[160px] text-base bg-black border-gray-700 text-white focus-visible:ring-blue-400"
+                required
               />
             </div>
           </div>
