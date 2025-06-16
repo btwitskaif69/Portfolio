@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ShineBorder } from "@/components/magicui/shine-border";
-import { Toaster, toast } from "@/components/ui/sonner"; // ✅ FIXED
+import { toast, Toaster } from "sonner";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -22,11 +22,10 @@ export function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validation
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
-      toast.error("Please fill in all fields.", {
-        description: "All fields are required.",
-      });
+    const { name, email, message } = formData;
+
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      toast.error("All fields are required.");
       return;
     }
 
@@ -45,20 +44,14 @@ export function ContactForm() {
       const data = await response.json();
 
       if (data.success) {
-        toast.success("Message sent!", {
-          description: "Your message was sent successfully.",
-        });
+        toast.success("Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        toast.error("Failed to send message.", {
-          description: "Something went wrong. Please try again.",
-        });
+        toast.error("Failed to send message. Please try again.");
       }
     } catch (error) {
-      console.error("Submission error:", error);
-      toast.error("Error occurred.", {
-        description: "Something went wrong. Please try again.",
-      });
+      console.error("Error submitting form:", error);
+      toast.error("An error occurred. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -67,12 +60,12 @@ export function ContactForm() {
   return (
     <div
       id="contact-form-section"
-      className="align-center flex flex-col items-center justify-center bg-black py-10"
+      className="flex flex-col items-center justify-center bg-black py-10"
     >
-      {/* Mount toaster here */}
-      <Toaster /> {/* ✅ FIXED */}
+      {/* Mount Toaster */}
+      <Toaster richColors position="top-right" />
 
-      <div className="relative overflow-hidden w-[92%] bg-black rounded-lg p-8 space-y-8 my-8 outline-2">
+      <div className="relative overflow-hidden w-[92%] bg-black rounded-lg p-8 space-y-8 my-8">
         <ShineBorder
           borderWidth={1.5}
           duration={10}
@@ -81,7 +74,7 @@ export function ContactForm() {
         />
 
         <div className="space-y-4 relative z-10">
-          <h1 className="text-4xl font-medium tracking-tight text-gray-100">Hello👋</h1>
+          <h1 className="text-4xl font-medium tracking-tight text-gray-100">Hello 👋</h1>
           <p className="text-lg text-gray-300 leading-relaxed">
             I'd love to hear about your project. Let's see how we can team up.
           </p>
@@ -146,4 +139,4 @@ export function ContactForm() {
       </div>
     </div>
   );
-}s
+}
