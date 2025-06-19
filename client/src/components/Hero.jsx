@@ -1,18 +1,12 @@
-import { ExternalLink } from "lucide-react";
-import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { AnimatedGradientText } from "./magicui/animated-gradient-text";
-import { HoverBorderGradient } from "./ui/hover-border-gradient";
-// import { useEffect, useState } from "react";
 import { ShinyButton } from "@/components/magicui/shiny-button";
 import resumeFile from "../assets/Resume.pdf";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import bg from "../assets/bg.jpg";
 import { BookText } from "lucide-react";
 import { RainbowButton } from "./magicui/rainbow-button";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail} from "lucide-react";
 import { ShineBorder } from "./magicui/shine-border";
 
 const Hero = () => {
