@@ -10,36 +10,6 @@ import { Github, Linkedin, Mail} from "lucide-react";
 import { ShineBorder } from "./magicui/shine-border";
 
 const Hero = () => {
-  // const greetings = [
-  //   "As-salamu alaykum", // Arabic/Urdu2
-  //   "Hello", // English
-  //   "नमस्ते", // Hindi (Namaste)
-  //   "Hola", // Spanish
-  //   "Bonjour", // French
-  //   "你好", // Chinese (Nǐ hǎo)
-  //   "こんにちは", // Japanese (Konnichiwa)
-  //   "안녕하세요", // Korean (Annyeonghaseyo)
-  //   "Guten Tag", // German
-  //   "Ciao", // Italian
-  //   "Olá", // Portuguese
-  //   "Привет", // Russian (Privet)
-  //   "Salam", // Persian/Azerbaijani
-  //   "Sawubona", // Zulu
-  //   "Sawasdee", // Thai (สวัสดี)
-  //   "Selamat pagi", // Indonesian/Malay (Good morning)
-  //   "Habari", // Swahili
-  //   "Hej", // Swedish/Danish
-  //   "Merhaba", // Turkish
-  // ];
-
-  // const [currentGreeting, setCurrentGreeting] = useState(0);
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentGreeting((prev) => (prev + 1) % greetings.length);
-  //   }, 2000);
-  //   return () => clearInterval(interval);
-  // }, []);
 
   const handleDownload = () => {
     const link = document.createElement("a");
