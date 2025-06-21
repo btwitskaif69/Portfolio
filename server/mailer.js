@@ -1,4 +1,3 @@
-// mailer.js
 const { Resend } = require('resend');
 require('dotenv').config();
 
@@ -11,16 +10,42 @@ const sendMail = async ({ name, email, message }) => {
     subject: `New message from ${name}`,
     reply_to: email,
     html: `
-      <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; padding: 30px;">
-        <div style="max-width: 600px; margin: auto; background: white; padding: 20px 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-          <h2 style="color: #333;">New Message from Your Portfolio</h2>
-          <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
-          <p style="font-size: 16px;"><strong>Name:</strong> ${name}</p>
-          <p style="font-size: 16px;"><strong>Email:</strong> <a href="mailto:${email}" style="color: #007bff;">${email}</a></p>
-          <p style="font-size: 16px;"><strong>Message:</strong></p>
-          <p style="font-size: 15px; line-height: 1.6; background: #f1f1f1; padding: 15px; border-radius: 6px;">${message}</p>
-          <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0 10px;">
-          <p style="font-size: 12px; color: #999; text-align: center;">This message was sent via your portfolio contact form.</p>
+      <div style="background-color: #f4f6f8; padding: 40px 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        <div style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+          
+          <!-- Header with optional logo -->
+          <div style="background-color: #0d6efd; padding: 20px 30px; text-align: center; color: white;">
+            <!-- Optional logo: insert your image URL below -->
+            <!-- <img src="https://yourdomain.com/path-to-image.png" alt="Logo" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 10px;" /> -->
+            <h1 style="margin: 0; font-size: 22px;">📬 New Portfolio Inquiry</h1>
+          </div>
+          
+          <!-- Body -->
+          <div style="padding: 30px;">
+            <p style="font-size: 18px; margin-bottom: 25px;">Hi there! You’ve received a new message via your portfolio contact form.</p>
+            
+            <div style="font-size: 16px; margin-bottom: 20px;">
+              <strong>Name:</strong><br />
+              <span style="color: #333;">${name}</span>
+            </div>
+            
+            <div style="font-size: 16px; margin-bottom: 20px;">
+              <strong>Email:</strong><br />
+              <a href="mailto:${email}" style="color: #0d6efd; text-decoration: none;">${email}</a>
+            </div>
+
+            <div style="font-size: 16px; margin-bottom: 10px;">
+              <strong>Message:</strong>
+            </div>
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; font-size: 15px; color: #444; line-height: 1.6;">
+              ${message}
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div style="background-color: #f1f3f5; padding: 15px 30px; text-align: center; font-size: 13px; color: #888;">
+            This message was sent from your portfolio website.
+          </div>
         </div>
       </div>
     `,
