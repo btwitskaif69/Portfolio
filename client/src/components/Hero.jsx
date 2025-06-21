@@ -66,31 +66,23 @@ const Hero = () => {
 
       <div className="relative z-10 w-full ">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 my-auto flex align-center justify-center flex-col items-center">
-<div className="relative inline-flex items-center mb-2 sm:mb-5">
-  <Badge
-    variant="secondary"
-    className="rounded-full bg-transparent text-white flex items-center transition-all duration-200
+          <div className="relative inline-flex items-center mb-2 sm:mb-5">
+            <Badge
+              variant="secondary"
+              className="rounded-full bg-transparent text-white flex items-center transition-all duration-200
                h-7 px-4 py-1.5 text-sm gap-1.5
-               sm:h-11 sm:px-8 sm:py-2 sm:text-base sm:gap-2"
-  >
-    <div className="w-1.5 h-1.5 bg-white rounded-full mr-1 sm:w-2 sm:h-2 sm:mr-2" />
-    <span className="whitespace-nowrap text-[0.7rem] sm:text-lg">Available for new opportunities</span>
-  </Badge>
-  <ShineBorder
-    borderWidth={1.5}
-    duration={10}
-    shineColor={["#be57ff", "#8500f5", "#f8dfff"]}
-    className="rounded-full"
-  />
-</div>
+               sm:h-11 sm:px-8 sm:py-2 sm:text-base sm:gap-2">
 
-
-          {/* Animated Greeting
-          <div className="w-full flex justify-center mb-2">
-            <AnimatedGradientText className="text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight text-center max-w-6xl mx-auto">
-              {greetings[currentGreeting]}
-            </AnimatedGradientText>
-          </div> */}
+          <div className="w-1.5 h-1.5 bg-white rounded-full mr-1 sm:w-2 sm:h-2 sm:mr-2" />
+              <span className="whitespace-nowrap text-[0.7rem] sm:text-lg">Available for new opportunities</span>
+            </Badge>
+            <ShineBorder
+              borderWidth={1.5}
+              duration={10}
+              shineColor={["#be57ff", "#8500f5", "#f8dfff"]}
+              className="rounded-full"
+            />
+          </div>
 
           {/* Heading */}
           <div className="w-full flex flex-col items-center">

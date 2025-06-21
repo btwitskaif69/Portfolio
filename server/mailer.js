@@ -6,7 +6,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 const sendMail = async ({ name, email, message }) => {
   return resend.emails.send({
-    from: 'Kaif <onboarding@resend.dev>',  // You can change the name before <...>
+    from: '${name} via Portfolio Client Inquiry <onboarding@resend.dev>',  // You can change the name before <...>
     to: process.env.RECEIVER_EMAIL,
     subject: `New message from ${name}`,
     reply_to: email,
