@@ -10,8 +10,8 @@ const sendMail = async ({ name, email, message }) => {
     subject: `New message from ${name}`,
     reply_to: email,
     html: `
-      <div style="background-color: #f4f6f8; padding: 40px 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-        <div style="max-width: 600px; margin: auto; background: linear-gradient(to bottom right, #6e00b8, #4d0099, #a76dd4); border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+      <div style="background: linear-gradient(to bottom right, #6e00b8, #4d0099, #a76dd4); padding: 40px 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        <div style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
           
           <!-- Header with optional logo -->
           <div style="background-color: #0d6efd; padding: 20px 30px; text-align: center; color: white;">
