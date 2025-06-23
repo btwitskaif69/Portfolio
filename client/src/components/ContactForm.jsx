@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ShineBorder } from "@/components/magicui/shine-border";
 import { toast, Toaster } from "sonner";
+import { ShinyButton } from "@/components/magicui/shiny-button";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -128,13 +129,13 @@ export function ContactForm() {
             </div>
           </div>
 
-          <Button
+          <ShinyButton
             type="submit"
             disabled={isSubmitting}
-            className="w-full h-12 text-base bg-white hover:bg-white/80 text-black transition-colors"
+            className="w-full!"
           >
             {isSubmitting ? "Sending..." : "Send"}
-          </Button>
+          </ShinyButton>
         </form>
       </div>
     </div>
