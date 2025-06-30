@@ -86,10 +86,7 @@ const Hero = () => {
 
           {/* Heading */}
           <div className="w-full flex flex-col items-center">
-            <h1
-              className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight  text-center  mx-auto 
-            "
-            >
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight  text-center  mx-auto">
               Hi, I'm Mohd Kaif
             </h1>
 
