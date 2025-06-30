@@ -45,7 +45,9 @@ export function ContactForm() {
       const data = await response.json();
 
       if (data.success) {
-        toast.success("Message sent successfully!");
+        toast.success("Message sent successfully!", {
+          description: "You will be hearing from me soon."
+        });
         setFormData({ name: "", email: "", message: "" });
       } else {
         toast.error("Failed to send message. Please try again.");
