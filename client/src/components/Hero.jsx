@@ -63,7 +63,6 @@ const Hero = () => {
     >
       <Spotlight />
       {/* Content */}
-
       <div className="relative z-10 w-full ">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 my-auto flex align-center justify-center flex-col items-center">
           <div className="relative inline-flex items-center mb-2 sm:mb-5">
