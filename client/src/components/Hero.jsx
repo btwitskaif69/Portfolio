@@ -53,16 +53,15 @@ const Hero = () => {
 
   return (
     <section
-      className="relative overflow-hidden flex items-center justify-center min-h-screen bg-black py-20 background-size-110%"
-      style={{
-        backgroundImage: `url(${bg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "bottom",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+        className="relative overflow-hidden flex items-center justify-center min-h-screen bg-black py-20 background-size-110%"
+          style={{
+            backgroundImage: `url(${bg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "bottom",
+            backgroundRepeat: "no-repeat",
+          }}>
+
       <Spotlight />
-      {/* Content */}
       <div className="relative z-10 w-full ">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 my-auto flex align-center justify-center flex-col items-center">
           <div className="relative inline-flex items-center mb-2 sm:mb-5">
@@ -74,13 +73,13 @@ const Hero = () => {
 
           <div className="w-1.5 h-1.5 bg-white rounded-full mr-1 sm:w-2 sm:h-2 sm:mr-2" />
               <span className="whitespace-nowrap text-[0.7rem] sm:text-lg">Available for new opportunities</span>
-            </Badge>
-            <ShineBorder
-              borderWidth={1.5}
-              duration={10}
-              shineColor={["#be57ff", "#8500f5", "#f8dfff"]}
-              className="rounded-full"
-            />
+                </Badge>
+                  <ShineBorder
+                    borderWidth={1.5}
+                    duration={10}
+                    shineColor={["#be57ff", "#8500f5", "#f8dfff"]}
+                    className="rounded-full"
+                  />
           </div>
 
           {/* Heading */}
