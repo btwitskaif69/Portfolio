@@ -56,7 +56,7 @@ export default function NewForm() {
       />
  
       <div className="container relative z-10 mx-auto px-4 md:px-6">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[28px] border border-border/40 bg-secondary/20 shadow-xl backdrop-blur-sm">
+        <div className="mx-auto max-w-8xl overflow-hidden rounded-[28px] border border-border/40 bg-secondary/20 shadow-xl backdrop-blur-sm">
           <div className="grid md:grid-cols-2">
             <div className="relative p-6 md:p-10" ref={formRef}>
               <motion.div
@@ -177,7 +177,7 @@ export default function NewForm() {
               initial={{ opacity: 0, x: 20 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="relative my-8 flex items-center md:justify-end sm:justify-center overflow-hidden px-8"
+              className="relative my-8 flex items-center md:justify-end sm:justify-center overflow-hidden md:px-8 sm:px-2"
             >
               <div className="flex flex-col items-center justify-center overflow-hidden">
                 <article className="relative mx-auto h-[350px] min-h-60 max-w-[650px] overflow-hidden rounded-3xl bg-gradient-to-b from-[#8500f5] to-[#e60a64]/5 p-6 text-3xl tracking-tight text-white md:h-[450px] md:min-h-80 md:p-8 md:text-4xl md:leading-[1.05] lg:text-5xl">
