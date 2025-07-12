@@ -8,6 +8,7 @@ import { TextReveal } from "@/components/magicui/text-reveal";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import FeaturedProjects from './components/FeaturedProjects';
 import SmoothScrollProvider from '@/components/SmoothScrollProvider';
+// import NewForm from './components/NewForm';
 const App = () => {
 
   
@@ -26,6 +27,7 @@ const App = () => {
         <TextReveal>
           I am dedicated to transforming ideas into impactful realities, blending creativity, precision, and a deep passion for excellence to deliver work that truly makes a difference.
         </TextReveal>
+        {/* <NewForm/> */}
         <ContactForm/>
         <Footer/>
         </SmoothScrollProvider>
