@@ -14,6 +14,7 @@ export function ContactForm() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSent, setIsSent] = useState(false);
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -31,6 +32,7 @@ export function ContactForm() {
     }
 
     setIsSubmitting(true);
+    setIsSent(false);
 
     try {
       const response = await fetch(
@@ -49,6 +51,8 @@ export function ContactForm() {
           description: "You will be hearing from me soon."
         });
         setFormData({ name: "", email: "", message: "" });
+        setIsSent(true);
+        setTimeout(() => setIsSent(false), 2000);
       } else {
         toast.error("Failed to send message. Please try again.");
       }
@@ -133,10 +137,14 @@ export function ContactForm() {
 
           <ShinyButton
             type="submit"
-            disabled={isSubmitting}
+            disabled={isSubmitting || isSent}
             className="w-full!"
           >
-            {isSubmitting ? "Sending..." : "Send Message"}
+            {isSent
+              ? "Message Sent"
+              : isSubmitting
+                ? "Sending..."
+                : "Send Message"}
           </ShinyButton>
         </form>
       </div>
