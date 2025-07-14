@@ -65,7 +65,6 @@ export default function Experience() {
                   ))}
                 </ul>
               </div>
-
               <div>
                 <h4 className="font-medium mb-3">Technologies Used:</h4>
                 <div className="flex flex-wrap gap-2">
