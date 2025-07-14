@@ -136,7 +136,7 @@ export function ContactForm() {
             disabled={isSubmitting}
             className="w-full!"
           >
-            {isSubmitting ? "Sending..." : "Send"}
+            {isSubmitting ? "Sending..." : "Send Message"}
           </ShinyButton>
         </form>
       </div>
