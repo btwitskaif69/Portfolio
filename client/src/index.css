@@ -169,3 +169,10 @@
   background: #8500f5; /* Yellow background */
   color: #ffffff;         /* Black text */
   }
+
+  input:-webkit-autofill {
+  background-color: #000 !important;
+  -webkit-box-shadow: 0 0 0 1000px #000 inset !important;
+  -webkit-text-fill-color: #fff !important;
+  color: #fff !important;
+}

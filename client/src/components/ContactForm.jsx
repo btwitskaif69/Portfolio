@@ -80,33 +80,35 @@ export function ContactForm() {
           className="rounded-lg"
         />
 
-        <div className="space-y-4 relative z-10">
-          <h1 className="text-4xl font-medium tracking-tight text-gray-100">Hello 👋</h1>
-          <p className="text-lg text-gray-300 leading-relaxed">
-            I'd love to hear about your project. Let's see how we can team up.
-          </p>
-        </div>
+<div className="space-y-4 relative z-10">
+  <h1 className="text-4xl font-semibold tracking-tight text-gray-100">Hey there 👋</h1>
+  <p className="text-lg text-gray-300 leading-relaxed">
+    Got a project in mind? I’m all ears! Whether you're dreaming big or starting small <br />
+    let’s connect and build something awesome together.
+  </p>
+</div>
+
 
         <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
           <div className="space-y-5">
             <div className="grid md:grid-cols-2 gap-5">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-base font-medium text-gray-300">
-                  Your name
+                  Your Name
                 </label>
                 <Input
                   id="name"
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="John Doe"
-                  className="h-12 text-base bg-black border-gray-700 text-white focus-visible:ring-blue-400"
+                  className="h-12 text-base bg-black border-gray-700 text-white focus-visible:ring-[#8500f5] focus-visible:ring-1"
                   required
                 />
               </div>
 
               <div className="space-y-2">
                 <label htmlFor="email" className="text-base font-medium text-gray-300">
-                  Your email
+                  Your Email
                 </label>
                 <Input
                   id="email"
@@ -114,7 +116,7 @@ export function ContactForm() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="your-email@email.com"
-                  className="h-12 text-base bg-black border-gray-700 text-white focus-visible:ring-blue-400"
+                  className="h-12 text-base bg-black border-gray-700 text-white focus-visible:ring-[#8500f5] focus-visible:ring-1"
                   required
                 />
               </div>
@@ -122,14 +124,14 @@ export function ContactForm() {
 
             <div className="space-y-2">
               <label htmlFor="message" className="text-base font-medium text-gray-300">
-                Your message
+                Your Message
               </label>
               <Textarea
                 id="message"
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Write your message here..."
-                className="min-h-[160px] text-base bg-black border-gray-700 text-white focus-visible:ring-blue-400"
+                className="min-h-[160px] text-base bg-black border-gray-700 text-white focus-visible:ring-[#8500f5] focus-visible:ring-1"
                 required
               />
             </div>
