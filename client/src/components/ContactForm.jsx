@@ -80,13 +80,13 @@ export function ContactForm() {
           className="rounded-lg"
         />
 
-<div className="space-y-4 relative z-10">
-  <h1 className="text-4xl font-semibold tracking-tight text-gray-100">Hey there 👋</h1>
-  <p className="text-lg text-gray-300 leading-relaxed">
-    Got a project in mind? I’m all ears! Whether you're dreaming big or starting small <br />
-    let’s connect and build something awesome together.
-  </p>
-</div>
+          <div className="space-y-4 relative z-10">
+            <h1 className="text-4xl font-semibold tracking-tight text-gray-100">Hey there 👋</h1>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              Got a project in mind? I’m all ears! Whether you're dreaming big or starting small <br />
+              let’s connect and build something awesome together.
+            </p>
+          </div>
 
 
         <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
