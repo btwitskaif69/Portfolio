@@ -4,52 +4,61 @@ import { useRef, useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button"
 import { Globe, Github } from 'lucide-react';
 
-const MobileCard = ({ title, catagory, description, src, techStack, link, source }) => (
+const MobileCard = ({ title, catagory, description, src, techStack, link, source}) => (
+  
   <div className="m-4">
-  <div className="w-full bg-black text-white rounded-lg p-4 mb-4 shadow-md outline-2"
-   onClick={() => window.open(link, "_blank")}
-  >
-    <img
-      src={src}
-      alt={title}
-      className="w-full h-auto object-contain rounded-md mb-3"
-    />
-    <p className="bg-gradient-to-r from-[#be57ff] via-[#8500f5] to-[#f8dfff] bg-clip-text text-transparent text-sm font-semibold uppercase tracking-wide">{title}</p>
-    <h2 className="text-2xl font-medium mb-2">{catagory}</h2>
-    <p className="text-xs text-gray-300">{description}</p>
-    {techStack?.length > 0 && (
-      <div className="flex flex-wrap gap-2 mt-3">
-        {techStack.map((tech, index) => (
-          <span
-            key={index}
-            className="px-2 py-1 text-xs outline-1 rounded-full"
+    <div className="w-full bg-black text-white rounded-lg p-4 mb-4 shadow-md outline-2"
+      onClick={() => window.open(link, "_blank")}>
+      <img
+        src={src}
+        alt={title}
+        className="w-full h-auto object-contain rounded-md mb-3"/>
+      <p className="bg-gradient-to-r from-[#be57ff] via-[#8500f5] to-[#f8dfff] bg-clip-text text-transparent text-sm font-semibold uppercase tracking-wide">
+        {title}
+      </p>
+      <h2 className="text-2xl font-medium mb-2">{catagory}</h2>
+      <p className="text-xs text-gray-300">{description}</p>
+      {techStack?.length > 0 && (
+        <div className="flex flex-wrap gap-2 mt-3">
+          {techStack.map((tech, index) => (
+            <span
+              key={index}
+              className="px-2 py-1 text-xs outline-1 rounded-full"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      )}
+      <div className="w-full flex flex-row items-center justify-start gap-2 mt-4">
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block"
+        >
+          <Button className="font-medium px-2 py-1 text-xs h-7 min-w-0">
+            <Globe className="w-4 h-4" />
+            View Project
+          </Button>
+        </a>
+
+        <a
+          href={source}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block"
+        >
+          <Button
+            variant="outline"
+            className="font-medium px-2 py-1 text-xs h-7 min-w-0"
           >
-            {tech}
-          </span>
-        ))}
+            <Github className="w-4 h-4" />
+            Source Code
+          </Button>
+        </a>
       </div>
-    )}
-                <div className="w-full flex flex-row items-center justify-start gap-2 mt-4">
-              <a href={link} target="_blank" rel="noopener noreferrer" className="inline-block">
-
-              <Button className="font-medium px-2 py-1 text-xs h-7 min-w-0">
-              <Globe className="w-4 h-4" />
-              View Project
-              </Button>
-
-              </a>
-
-              <a href={source} target="_blank" rel="noopener noreferrer" className="inline-block">
-
-              <Button variant="outline" className="font-medium px-2 py-1 text-xs h-7 min-w-0">
-              <Github className="w-4 h-4" />
-              Source Code
-              </Button>
-
-              </a>
-
-            </div>
-  </div>
+    </div>
   </div>
 );
 
