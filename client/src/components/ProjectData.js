@@ -1,7 +1,7 @@
-import image1 from '../assets/Project1.jpg';
-import image2 from '../assets/Project2.jpg';
-import image3 from '../assets/Project3.jpg';
-import image4 from '../assets/Project4.jpg';
+import image1 from '../assets/Project1.webp';
+import image2 from '../assets/Project2.webp';
+import image3 from '../assets/Project3.webp';
+import image4 from '../assets/Project4.webp';
 
 
 
