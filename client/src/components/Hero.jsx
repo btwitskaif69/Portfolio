@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ShinyButton } from "@/components/magicui/shiny-button";
 import resumeFile from "../assets/Resume.pdf";
 import { Spotlight } from "@/components/ui/spotlight-new";
-import bg from "../assets/bg.webp";
+import bg from "../assets/bg.jpg";
 import { BookText } from "lucide-react";
 import { RainbowButton } from "./magicui/rainbow-button";
 import { Github, Linkedin, Mail} from "lucide-react";
