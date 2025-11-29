@@ -14,7 +14,7 @@ export default function SmoothScrollProvider({ children }) {
       infinite: false,
       syncTouch: false,
       wheelMultiplier: 0.8,
-      touchInertiaMultiplier: 20,
+      touchInertiaMultiplier: 10,
     });
 
     let rafId = null;
