@@ -26,7 +26,7 @@ const slideUp = {
 export default function Preloader({
   onComplete
 }) {
- 
+
   const [index, setIndex] = useState(0)
   const [dimension, setDimension] = useState({ width: 0, height: 0 })
   const [isExiting, setIsExiting] = useState(false)
@@ -73,7 +73,7 @@ export default function Preloader({
       variants={slideUp}
       initial="initial"
       animate={isExiting ? "exit" : "initial"}
-      className="fixed inset-0 w-screen h-screen flex items-center justify-center bg-black z-[99999999999]">
+      className="fixed inset-0 w-screen h-screen flex items-center justify-center z-[99999999999]">
       {dimension.width > 0 && (
         <>
           <motion.p
@@ -85,11 +85,18 @@ export default function Preloader({
             {words[index]}
           </motion.p>
           <svg className="absolute top-0 w-full h-[calc(100%+300px)]">
+            <defs>
+              <radialGradient id="preloaderGradient" cx="50%" cy="10%" r="125%" fx="50%" fy="10%">
+                <stop offset="0%" stopColor="#000000" />
+                <stop offset="40%" stopColor="#000000" />
+                <stop offset="100%" stopColor="#7c3aed" />
+              </radialGradient>
+            </defs>
             <motion.path
               variants={curve}
               initial="initial"
               animate={isExiting ? "exit" : "initial"}
-              fill="#070b13" />
+              fill="url(#preloaderGradient)" />
           </svg>
         </>
       )}
